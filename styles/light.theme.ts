@@ -9,8 +9,19 @@ const querySize = {
   xxl: "(min-width: 2000px)",
 };
 
+const color = {
+  primary: "#FFFFFA",
+  secondary: "#FFFFFACC",
+  accent: "#4A38BC",
+  detail: "#9D8DF1",
+  contrast: "#FFDF00",
+  header: "#121317",
+  paragraph: "#2C2E38",
+};
+
 const light: DefaultTheme = {
   ...querySize,
+  ...color,
 };
 
 export default light;

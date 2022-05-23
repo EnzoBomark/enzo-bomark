@@ -9,8 +9,19 @@ const querySize = {
   xxl: "(min-width: 2000px)",
 };
 
+const color = {
+  primary: "#000000",
+  secondary: "#000000",
+  accent: "#20C20E",
+  detail: "#20C20E",
+  contrast: "#20C20E",
+  header: "#20C20E",
+  paragraph: "#20C20E",
+};
+
 const matrix: DefaultTheme = {
   ...querySize,
+  ...color,
 };
 
 export default matrix;

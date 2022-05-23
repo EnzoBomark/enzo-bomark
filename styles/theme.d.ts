@@ -9,6 +9,16 @@ interface querySize {
   xxl: string;
 }
 
+interface color {
+  primary: string;
+  secondary: string;
+  detail: string;
+  accent: string;
+  contrast: string;
+  header: string;
+  paragraph: string;
+}
+
 declare module "styled-components" {
-  export interface DefaultTheme extends querySize {}
+  export interface DefaultTheme extends querySize, color {}
 }
