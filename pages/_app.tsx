@@ -12,7 +12,7 @@ const METADATA = () => {
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta charSet="utf-8" />
-      <title>U11</title>
+      <title>Enzo Bomark</title>
       <meta name="description" content="An example of a meta description." />
       <link
         rel="icon"
