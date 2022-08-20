@@ -27,10 +27,10 @@
       "@/core/*": ["components/core/*"],
       "@/layout/*": ["components/layout/*"],
       "@/template/*": ["components/template/*"],
-      "@/interfaces/*": ["interfaces/*"],
       "@/utils/*": ["utils/*"],
       "@/assets/*": ["assets/*"],
-      "@/hooks/*": ["hooks/*"]
+      "@/hooks/*": ["hooks/*"],
+      "@/types/*": ["types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

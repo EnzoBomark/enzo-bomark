@@ -1,11 +1,8 @@
 import * as React from "react";
+import * as S from "./Main.styled";
 
-import Wrapper from "./Main.styled";
-
-interface Main {}
-
-const Main: React.FC<React.PropsWithChildren<Main>> = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const Main: React.FC = ({ children }) => {
+  return <S.Main>{children}</S.Main>;
 };
 
 export default Main;

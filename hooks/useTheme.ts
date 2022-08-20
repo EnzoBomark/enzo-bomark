@@ -1,9 +1,9 @@
 import * as React from "react";
 import { DefaultTheme } from "styled-components";
 
-import matrix from "@/styles/matrix.theme";
-import light from "@/styles/light.theme";
-import dark from "@/styles/dark.theme";
+import matrix from "@/styles/themes/matrix.theme";
+import light from "@/styles/themes/light.theme";
+import dark from "@/styles/themes/dark.theme";
 
 const themes = [dark, light, matrix];
 
