@@ -9,9 +9,63 @@ const Home: React.FC = () => {
       <S.H3>Lorem ipsum dolor.</S.H3>
       <S.H4>Lorem ipsum dolor.</S.H4>
       <S.H5>Lorem ipsum dolor.</S.H5>
-      <S.Label>Lorem ipsum dolor.</S.Label>
+      <S.B3>Lorem ipsum dolor.</S.B3>
       <S.Detail>Lorem ipsum dolor.</S.Detail>
-      <S.Paragraph>Lorem ipsum dolor.</S.Paragraph>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
+      <S.Caption>Lorem ipsum dolor.</S.Caption>
+      <S.H1>Lorem ipsum dolor.</S.H1>
+      <S.H2>Lorem ipsum dolor.</S.H2>
+      <S.H3>Lorem ipsum dolor.</S.H3>
+      <S.H4>Lorem ipsum dolor.</S.H4>
+      <S.H5>Lorem ipsum dolor.</S.H5>
+      <S.B3>Lorem ipsum dolor.</S.B3>
+      <S.Detail>Lorem ipsum dolor.</S.Detail>
+      <S.B2>Lorem ipsum dolor.</S.B2>
       <S.Caption>Lorem ipsum dolor.</S.Caption>
     </>
   );

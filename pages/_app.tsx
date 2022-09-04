@@ -6,6 +6,7 @@ import GlobalStyle from "@/styles/global/global";
 import Main from "@/layout/Main";
 import useTheme from "@/hooks/useTheme";
 import MetaData from "./_metadata";
+import Header from "@/layout/Header";
 
 const MyApp: React.FC<Next.AppProps> = ({ Component, pageProps }) => {
   const [theme] = useTheme();
@@ -16,6 +17,8 @@ const MyApp: React.FC<Next.AppProps> = ({ Component, pageProps }) => {
       <GlobalStyle />
 
       <div id="portal" />
+
+      <Header />
 
       <Main>
         <Component {...pageProps} />

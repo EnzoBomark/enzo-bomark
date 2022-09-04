@@ -19,6 +19,8 @@ export const Header = css<IHeader>`
 
   text-decoration-line: ${({ underline }) =>
     underline ? "underline" : "none"};
+
+  margin: 16px;
 `;
 
 export interface IRegular {
@@ -38,4 +40,6 @@ export const Regular = css<IRegular>`
 
   text-decoration-line: ${({ underline }) =>
     underline ? "underline" : "none"};
+
+  margin: 16px;
 `;

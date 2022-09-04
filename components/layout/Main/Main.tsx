@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as S from "./Main.styled";
 
-const Main: React.FC = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Main: React.FC<Props> = ({ children }) => {
   return <S.Main>{children}</S.Main>;
 };
 

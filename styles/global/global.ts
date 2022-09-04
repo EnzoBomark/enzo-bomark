@@ -18,6 +18,8 @@ const UniSansRegular = "/fonts/UniSans-Regular.ttf";
 
 const GlobalStyles = createGlobalStyle`
 
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -34,9 +36,9 @@ time, mark, audio, video {
  margin: 0;
  padding: 0;
  border: 0;
- font-size: 100%;
- font: inherit;
+ font-size: 62.5%;
  vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -66,6 +68,34 @@ table {
 body, #root {
     height: 100vh;
     font-family: "Candor", sans-serif;
+}
+
+.icon-4xs {
+  font-size: .6rem;
+}
+
+.icon-3xs {
+  font-size: .8rem;
+}
+
+.icon-xxs {
+  font-size: 1.2rem;
+}
+
+.icon-xs {
+  font-size: 1.6rem;
+}
+
+.icon-s {
+  font-size: 2.0rem;
+}
+
+.icon-m {
+  font-size: 3.2rem;
+}
+
+.icon-l {
+  font-size: 4.6rem;
 }
 
 

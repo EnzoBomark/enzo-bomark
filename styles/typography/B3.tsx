@@ -3,7 +3,7 @@ import { Regular, IRegular } from "./Default";
 
 interface Props extends IRegular {}
 
-export const Body = styled.p<Props>`
-  font-size: 14px;
+export const B3 = styled.p<Props>`
+  font-size: 1.2rem;
   ${Regular}
 `;
