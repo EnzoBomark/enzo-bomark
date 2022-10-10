@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 type Props = React.PropsWithChildren<{
   href: string;
   arrow?: boolean;
+  icon?: React.ReactNode;
   block?: boolean;
 }>;
 
@@ -16,7 +17,11 @@ const NavLink: React.FC<Props> = (props) => {
   return (
     <Link href={props.href}>
       <S.NavLink>
-        {props.arrow && <S.ChevronRight color="white" className="icon-xs" />}
+        {!props.icon && props.arrow && (
+          <S.ChevronRight color="white" className="icon-xs" />
+        )}
+
+        {props.icon && <S.IconWrapper>{props.icon}</S.IconWrapper>}
 
         <S.Anchor active={activeLink}>{props.children}</S.Anchor>
 

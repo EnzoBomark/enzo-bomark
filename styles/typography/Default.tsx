@@ -13,7 +13,7 @@ export const Header = css<IHeader>`
   color: ${({ color, theme }) =>
     color ? theme.color[color] : theme.color.g1000};
 
-  font-weight: ${({ regular }) => (regular ? 400 : 700)};
+  font-weight: ${({ regular }) => (regular ? 300 : 700)};
 
   text-align: ${({ align }) => align || "left"};
 
@@ -34,7 +34,7 @@ export const Regular = css<IRegular>`
   color: ${({ color, theme }) =>
     color ? theme.color[color] : theme.color.g1000};
 
-  font-weight: ${({ bold }) => (bold ? 700 : 400)};
+  font-weight: ${({ bold }) => (bold ? 700 : 300)};
 
   text-align: ${({ align }) => align || "left"};
 

@@ -15,7 +15,15 @@ export const ChevronRight = styled(IconChevronRight)`
   position: absolute;
   left: 0;
   opacity: 0;
-  transform: translateX(0%);
+  transform: translateX(-1rem);
+  transition: 0.2s;
+`;
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-1rem);
   transition: 0.2s;
 `;
 
@@ -39,13 +47,22 @@ export const NavLink = styled.div`
   cursor: pointer;
 
   &:hover {
+    ${IconWrapper} {
+      opacity: 1;
+      transform: translateX(1rem);
+    }
+
+    ${IconWrapper} + ${Anchor} {
+      transform: translateX(2.5rem);
+    }
+
     ${ChevronRight} {
       opacity: 1;
-      transform: translateX(1.5rem);
+      transform: translateX(1rem);
     }
 
     ${ChevronRight} + ${Anchor} {
-      transform: translateX(1.5rem);
+      transform: translateX(2.5rem);
     }
   }
 `;

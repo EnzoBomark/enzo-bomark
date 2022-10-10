@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { device } from "styles";
 
 const isOpen = css`
   transform: translateX(0);
@@ -28,6 +29,10 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
 
   ${(props) => (props.isOpen ? isOpen : isClosed)};
   transition: opacity 0.4s, transform 0.4s, visibility 0.4s;
+
+  @media ${device.m} {
+    display: none;
+  }
 `;
 
 export const NavLinksWrapper = styled.div`

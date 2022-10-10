@@ -6,7 +6,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 
 type Props = React.PropsWithChildren<{
   href: string;
-  blockContent?: React.ReactNode;
+  blockContent: React.ReactNode;
 }>;
 
 const NavBlock: React.FC<Props> = (props) => {
