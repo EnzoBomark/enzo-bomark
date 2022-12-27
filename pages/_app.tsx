@@ -1,20 +1,21 @@
-import * as React from "react";
-import * as Next from "next/app";
+import React from "react";
+import "animate.css";
+import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "styles/global/global";
+import { useTheme } from "hooks/useTheme";
+import { Main } from "components/layout/Main";
+import { Header } from "components/layout/Header";
+import { MetaData } from "./_metadata";
 
-import GlobalStyle from "@/styles/global/global";
-import Main from "@/layout/Main";
-import useTheme from "@/hooks/useTheme";
-import MetaData from "./_metadata";
-import Header from "@/layout/Header";
-
-const MyApp: React.FC<Next.AppProps> = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const [theme] = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
       <MetaData />
-      <GlobalStyle />
+
+      <GlobalStyles />
 
       <div id="portal" />
 
@@ -27,4 +28,5 @@ const MyApp: React.FC<Next.AppProps> = ({ Component, pageProps }) => {
   );
 };
 
-export default MyApp;
+// eslint-disable-next-line import/no-default-export
+export default App;

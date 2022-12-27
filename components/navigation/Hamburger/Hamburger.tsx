@@ -1,12 +1,12 @@
-import * as React from "react";
 import * as S from "./Hamburger.styled";
+import React from "react";
 
 type Props = {
   isOpen: boolean;
   setIsOpen: () => void;
 };
 
-const Hamburger: React.FC<Props> = (props) => {
+export const Hamburger: React.FC<Props> = (props) => {
   return (
     <S.Hamburger onClick={props.setIsOpen} isOpen={props.isOpen}>
       <S.BarOne />
@@ -14,5 +14,3 @@ const Hamburger: React.FC<Props> = (props) => {
     </S.Hamburger>
   );
 };
-
-export default Hamburger;

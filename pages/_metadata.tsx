@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
 import Head from "next/head";
 
-const MetaData = () => {
+export const MetaData = () => {
   return (
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -17,5 +17,3 @@ const MetaData = () => {
     </Head>
   );
 };
-
-export default MetaData;

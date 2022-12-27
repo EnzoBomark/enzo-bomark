@@ -1,39 +1,54 @@
 import styled from "styled-components";
 
-export const Block = styled.div<{ left: number }>`
-  visibility: hidden;
-
+export const NavBlockContent = styled.div`
+  animation: fadeIn 0.4s;
+  top: calc(100% + 10px);
   position: absolute;
-  top: 4.6rem;
-  left: ${(props) => props.left}px;
+  min-height: 30rem;
+  min-width: 20rem;
+  background-color: ${(props) => props.theme.color.g0};
+  display: none;
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.color.g100}99;
 
-  width: 100vw;
-  opacity: 0;
-  background-color: ${(props) => props.theme.color.g50};
-  transform: scaleY(0);
-  transform-origin: top center;
-  border-radius: 2px;
-  border-top: 1px solid ${(props) => props.theme.color.g100};
-  border-bottom: 1px solid ${(props) => props.theme.color.g100};
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 12px;
+    background-color: transparent;
+  }
 
-  transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
-
-  -webkit-box-shadow: 0px 10px 40px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 40px -7px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 40px -7px rgba(0, 0, 0, 0.75);
-
-  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: ${(props) => props.theme.color.g0};
+    border-top: 1px solid ${(props) => props.theme.color.g100}99;
+    border-left: 1px solid ${(props) => props.theme.color.g100}99;
+  }
 `;
 
-export const NavBlock = styled.div`
-  height: 100%;
+export const NavBlockChildren = styled.div`
+  height: fit-content;
+`;
+
+export const NavBlockWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    ${Block} {
-      visibility: visible;
-      transform: scaleY(1);
-      opacity: 1;
+    ${NavBlockContent} {
+      display: block;
     }
   }
 `;

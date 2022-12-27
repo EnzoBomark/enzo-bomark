@@ -23,16 +23,14 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@/styles/*": ["styles/*"],
-      "@/core/*": ["components/core/*"],
-      "@/layout/*": ["components/layout/*"],
-      "@/template/*": ["components/template/*"],
-      "@/utils/*": ["utils/*"],
-      "@/assets/*": ["assets/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/types/*": ["types/*"]
+      "styles/*": ["styles/*"],
+      "components/*": ["components/*"],
+      "utils/*": ["utils/*"],
+      "assets/*": ["assets/*"],
+      "hooks/*": ["hooks/*"],
+      "types/*": ["types/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./.eslintrc.js"],
   "exclude": ["node_modules"]
 }

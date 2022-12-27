@@ -1,1 +1,1 @@
-export { default } from "./NavBlock";
+export { NavBlock } from "./NavBlock";

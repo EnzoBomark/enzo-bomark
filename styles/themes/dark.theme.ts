@@ -1,4 +1,4 @@
-const dark: Theme = {
+export const dark: Theme = {
   querySize: {
     xs: "(min-width: 480px)",
     sm: "(min-width: 680px)",
@@ -89,5 +89,3 @@ const dark: Theme = {
     full: "9999px",
   },
 };
-
-export default dark;

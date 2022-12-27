@@ -1,24 +1,26 @@
 import { createGlobalStyle } from "styled-components";
-const CandorRegular = "/fonts/Candor-Regular.ttf";
-const CandorBlack = "/fonts/Candor-Black.ttf";
-const CandorBlackItalic = "/fonts/Candor-BlackItalic.ttf";
-const CandorBold = "/fonts/Candor-Bold.ttf";
-const CandorBoldItalic = "/fonts/Candor-BoldItalic.ttf";
-const CandorLight = "/fonts/Candor-Light.ttf";
-const CandorLightItalic = "/fonts/Candor-LightItalic.ttf";
-const CandorMedium = "/fonts/Candor-Medium.ttf";
-const CandorMediumItalic = "/fonts/Candor-MediumItalic.ttf";
-const CandorRegularItalic = "/fonts/Candor-RegularItalic.ttf";
-const CandorSemiBold = "/fonts/Candor-Semibold.ttf";
-const CandorSemiBoldItalic = "/fonts/Candor-SemiboldItalic.ttf";
-const CandorThin = "/fonts/Candor-Thin.ttf";
-const CandorThinItalic = "/fonts/Candor-ThinItalic.ttf";
-const UniSansSemiBold = "/fonts/UniSans-SemiBold.ttf";
-const UniSansRegular = "/fonts/UniSans-Regular.ttf";
+const CandorRegular = "assets/fonts/Candor-Regular.ttf";
+const CandorBlack = "assets/fonts/Candor-Black.ttf";
+const CandorBlackItalic = "assets/fonts/Candor-BlackItalic.ttf";
+const CandorBold = "assets/fonts/Candor-Bold.ttf";
+const CandorBoldItalic = "assets/fonts/Candor-BoldItalic.ttf";
+const CandorLight = "assets/fonts/Candor-Light.ttf";
+const CandorLightItalic = "assets/fonts/Candor-LightItalic.ttf";
+const CandorMedium = "assets/fonts/Candor-Medium.ttf";
+const CandorMediumItalic = "assets/fonts/Candor-MediumItalic.ttf";
+const CandorRegularItalic = "assets/fonts/Candor-RegularItalic.ttf";
+const CandorSemiBold = "assets/fonts/Candor-Semibold.ttf";
+const CandorSemiBoldItalic = "assets/fonts/Candor-SemiboldItalic.ttf";
+const CandorThin = "assets/fonts/Candor-Thin.ttf";
+const CandorThinItalic = "assets/fonts/Candor-ThinItalic.ttf";
+const UniSansSemiBold = "assets/fonts/UniSans-SemiBold.ttf";
+const UniSansRegular = "assets/fonts/UniSans-Regular.ttf";
 
-const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 
-
+* {
+  box-sizing: border-box;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -195,5 +197,3 @@ body, #root {
     font-weight: 100; 
     src: url(${CandorThinItalic}) format('opentype')
 }`;
-
-export default GlobalStyles;

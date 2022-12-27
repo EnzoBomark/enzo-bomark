@@ -1,4 +1,4 @@
-const matrix: Theme = {
+export const matrix: Theme = {
   querySize: {
     xs: "(min-width: 480px)",
     sm: "(min-width: 680px)",
@@ -89,5 +89,3 @@ const matrix: Theme = {
     full: "9999px",
   },
 };
-
-export default matrix;

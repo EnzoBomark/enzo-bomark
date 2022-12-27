@@ -1,17 +1,14 @@
-import * as React from "react";
+import React, { useEffect, useRef } from "react";
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 
-import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect";
-
-// Window Event based useEventListener interface
-function useEventListener<K extends keyof WindowEventMap>(
+export function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
   handler: (event: WindowEventMap[K]) => void,
   element?: undefined,
   options?: boolean | AddEventListenerOptions
 ): void;
 
-// Element Event based useEventListener interface
-function useEventListener<
+export function useEventListener<
   K extends keyof HTMLElementEventMap,
   T extends HTMLElement = HTMLDivElement
 >(
@@ -22,14 +19,14 @@ function useEventListener<
 ): void;
 
 // Document Event based useEventListener interface
-function useEventListener<K extends keyof DocumentEventMap>(
+export function useEventListener<K extends keyof DocumentEventMap>(
   eventName: K,
   handler: (event: DocumentEventMap[K]) => void,
   element: React.RefObject<Document>,
   options?: boolean | AddEventListenerOptions
 ): void;
 
-function useEventListener<
+export function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap,
   T extends HTMLElement | void = void
@@ -42,13 +39,13 @@ function useEventListener<
   options?: boolean | AddEventListenerOptions
 ) {
   // Create a ref that stores handler
-  const savedHandler = React.useRef(handler);
+  const savedHandler = useRef(handler);
 
   useIsomorphicLayoutEffect(() => {
     savedHandler.current = handler;
   }, [handler]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Define the listening target
     const targetElement: T | Window = element?.current || window;
     if (!(targetElement && targetElement.addEventListener)) {
@@ -67,5 +64,3 @@ function useEventListener<
     };
   }, [eventName, element, options]);
 }
-
-export default useEventListener;

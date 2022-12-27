@@ -1,27 +1,23 @@
-import * as React from "react";
 import * as S from "./Header.styled";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "assets/icons/Logo.svg";
-import useWindowSize from "hooks/useWindowSize";
-import NavLink from "components/navigation/NavLink";
-import NavBlock from "components/navigation/NavBlock";
-import Hamburger from "components/navigation/Hamburger";
-import MobileMenu from "components/navigation/MobileMenu";
-import PostsBlockContent from "components/navigation/PostsBlockContent";
-import TemplatesBlockContent from "components/navigation/TemplatesBlockContent";
-import SnippetsBlockContent from "components/navigation/SnippetsBlockContent";
-import WorkBlockContent from "components/navigation/WorkBlockContent";
+import { useWindowSize } from "hooks/useWindowSize";
+import { NavLink } from "components/navigation/NavLink";
+import { NavBlock } from "components/navigation/NavBlock";
+import { Hamburger } from "components/navigation/Hamburger";
+import { MobileMenu } from "components/navigation/MobileMenu";
 import { mediaSize } from "styles";
 
-const Header: React.FC = () => {
+export const Header = () => {
   const window = useWindowSize();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const onPressHandler = React.useCallback(() => {
+  const onPressHandler = () => {
     setIsOpen((prev) => !prev);
-  }, []);
+  };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (window.width > mediaSize.m) setIsOpen(false);
   }, [window.width]);
 
@@ -40,18 +36,31 @@ const Header: React.FC = () => {
 
         <S.NavLinksWrapper>
           <NavLink href="/">Home</NavLink>
-          <NavBlock href="/posts" blockContent={<PostsBlockContent />}>
-            Posts
+
+          <NavBlock>
+            <NavLink href="/posts" block>
+              Posts
+            </NavLink>
           </NavBlock>
-          <NavBlock href="/templates" blockContent={<TemplatesBlockContent />}>
-            Templates
+
+          <NavBlock>
+            <NavLink href="/templates" block>
+              Templates
+            </NavLink>
           </NavBlock>
-          <NavBlock href="/snippets" blockContent={<SnippetsBlockContent />}>
-            Snippets
+
+          <NavBlock>
+            <NavLink href="/snippets" block>
+              Snippets
+            </NavLink>
           </NavBlock>
-          <NavBlock href="/work" blockContent={<WorkBlockContent />}>
-            Work
+
+          <NavBlock>
+            <NavLink href="/work" block>
+              Work
+            </NavLink>
           </NavBlock>
+
           <NavLink href="/about">About</NavLink>
         </S.NavLinksWrapper>
 
@@ -80,5 +89,3 @@ const Header: React.FC = () => {
     </S.Header>
   );
 };
-
-export default Header;

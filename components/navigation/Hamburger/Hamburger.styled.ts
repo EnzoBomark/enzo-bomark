@@ -5,7 +5,7 @@ export const BarOne = styled.div`
   height: 1.5px;
   background-color: ${(props) => props.theme.color.g200};
   margin: 6px 0;
-  transition: 0.4s;
+  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
   border-radius: 1px;
 `;
 
@@ -14,8 +14,8 @@ export const BarTwo = styled.div`
   height: 1.5px;
   background-color: ${(props) => props.theme.color.g200};
   margin: 6px 0;
-  transition: 0.4s;
   border-radius: 2px;
+  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 `;
 
 export const Hamburger = styled.div<{ isOpen: boolean }>`
@@ -37,4 +37,4 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-export * from "@/styles/index";
+export * from "styles/index";

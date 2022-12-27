@@ -1,0 +1,12 @@
+export { Anchor } from "./Anchor";
+export { Caption } from "./Caption";
+export { Detail } from "./Detail";
+export { Link } from "./Link";
+export { H1 } from "./H1";
+export { H2 } from "./H2";
+export { H3 } from "./H3";
+export { H4 } from "./H4";
+export { H5 } from "./H5";
+export { B3 } from "./B3";
+export { B2 } from "./B2";
+export { B1 } from "./B1";
