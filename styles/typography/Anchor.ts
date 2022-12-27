@@ -5,5 +5,6 @@ type Props = IRegular;
 
 export const Anchor = styled.a<Props>`
   font-size: 1.4rem;
+  line-height: 2rem;
   ${Regular}
 `;

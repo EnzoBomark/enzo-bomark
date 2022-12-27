@@ -8,12 +8,12 @@ export interface IHeader {
 }
 
 export const Header = css<IHeader>`
-  font-family: "UniSans";
+  font-family: "NeueHaas";
 
   color: ${({ color, theme }) =>
     color ? theme.color[color] : theme.color.g1000};
 
-  font-weight: ${({ regular }) => (regular ? 300 : 700)};
+  font-weight: ${({ regular }) => (regular ? 500 : 700)};
 
   text-align: ${({ align }) => align || "left"};
 
@@ -21,6 +21,8 @@ export const Header = css<IHeader>`
     underline ? "underline" : "none"};
 
   margin: 16px;
+
+  word-spacing: 0.2rem;
 `;
 
 export interface IRegular {
@@ -31,10 +33,12 @@ export interface IRegular {
 }
 
 export const Regular = css<IRegular>`
+  font-family: "NeueHaas";
+
   color: ${({ color, theme }) =>
     color ? theme.color[color] : theme.color.g1000};
 
-  font-weight: ${({ bold }) => (bold ? 700 : 300)};
+  font-weight: ${({ bold }) => (bold ? 700 : 500)};
 
   text-align: ${({ align }) => align || "left"};
 
@@ -42,4 +46,6 @@ export const Regular = css<IRegular>`
     underline ? "underline" : "none"};
 
   margin: 16px;
+
+  word-spacing: 0.2rem;
 `;

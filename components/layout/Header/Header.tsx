@@ -1,31 +1,21 @@
 import * as S from "./Header.styled";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Logo from "assets/icons/Logo.svg";
-import { useWindowSize } from "hooks/useWindowSize";
-import { NavLink } from "components/navigation/NavLink";
-import { NavBlock } from "components/navigation/NavBlock";
 import { Hamburger } from "components/navigation/Hamburger";
 import { MobileMenu } from "components/navigation/MobileMenu";
-import { mediaSize } from "styles";
+import { useHamburger } from "./hooks/useHamburger";
+import { MobileLinks } from "./components/MobileLinks";
+import { DesktopLinks } from "./components/DesktopLinks";
 
 export const Header = () => {
-  const window = useWindowSize();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onPressHandler = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  useEffect(() => {
-    if (window.width > mediaSize.m) setIsOpen(false);
-  }, [window.width]);
+  const [isHamburgerActive, toggleHamburger] = useHamburger();
 
   return (
-    <S.Header isOpen={isOpen}>
-      <S.Container>
+    <S.HeaderContainer isOpen={isHamburgerActive}>
+      <S.HeaderInner>
         <S.HamburgerWrapper>
-          <Hamburger isOpen={isOpen} setIsOpen={onPressHandler} />
+          <Hamburger isOpen={isHamburgerActive} setIsOpen={toggleHamburger} />
         </S.HamburgerWrapper>
 
         <S.IconWrapper>
@@ -35,57 +25,17 @@ export const Header = () => {
         </S.IconWrapper>
 
         <S.NavLinksWrapper>
-          <NavLink href="/">Home</NavLink>
-
-          <NavBlock>
-            <NavLink href="/posts" block>
-              Posts
-            </NavLink>
-          </NavBlock>
-
-          <NavBlock>
-            <NavLink href="/templates" block>
-              Templates
-            </NavLink>
-          </NavBlock>
-
-          <NavBlock>
-            <NavLink href="/snippets" block>
-              Snippets
-            </NavLink>
-          </NavBlock>
-
-          <NavBlock>
-            <NavLink href="/work" block>
-              Work
-            </NavLink>
-          </NavBlock>
-
-          <NavLink href="/about">About</NavLink>
+          <DesktopLinks />
         </S.NavLinksWrapper>
 
         <S.SpecialLinksWrapper>
           <S.B3>Contact</S.B3>
         </S.SpecialLinksWrapper>
-      </S.Container>
+      </S.HeaderInner>
 
-      <MobileMenu isOpen={isOpen}>
-        <NavLink href="/" arrow>
-          Home
-        </NavLink>
-        <NavLink href="/posts" arrow>
-          Posts
-        </NavLink>
-        <NavLink href="/templates" arrow>
-          Templates
-        </NavLink>
-        <NavLink href="/snippets" arrow>
-          Snippets
-        </NavLink>
-        <NavLink href="/about" arrow>
-          About
-        </NavLink>
+      <MobileMenu isOpen={isHamburgerActive}>
+        <MobileLinks />
       </MobileMenu>
-    </S.Header>
+    </S.HeaderContainer>
   );
 };

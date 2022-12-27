@@ -5,6 +5,7 @@ type Props = IRegular;
 
 export const Caption = styled.p<Props>`
   font-size: 1.4rem;
+  line-height: 2rem;
   font-style: italic;
   ${Regular}
 

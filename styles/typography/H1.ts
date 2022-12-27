@@ -5,5 +5,6 @@ type Props = IHeader;
 
 export const H1 = styled.h1<Props>`
   font-size: 6.4rem;
+  line-height: 7.2rem;
   ${Header}
 `;

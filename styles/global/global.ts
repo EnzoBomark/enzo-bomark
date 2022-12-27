@@ -1,20 +1,20 @@
 import { createGlobalStyle } from "styled-components";
-const CandorRegular = "assets/fonts/Candor-Regular.ttf";
-const CandorBlack = "assets/fonts/Candor-Black.ttf";
-const CandorBlackItalic = "assets/fonts/Candor-BlackItalic.ttf";
-const CandorBold = "assets/fonts/Candor-Bold.ttf";
-const CandorBoldItalic = "assets/fonts/Candor-BoldItalic.ttf";
-const CandorLight = "assets/fonts/Candor-Light.ttf";
-const CandorLightItalic = "assets/fonts/Candor-LightItalic.ttf";
-const CandorMedium = "assets/fonts/Candor-Medium.ttf";
-const CandorMediumItalic = "assets/fonts/Candor-MediumItalic.ttf";
-const CandorRegularItalic = "assets/fonts/Candor-RegularItalic.ttf";
-const CandorSemiBold = "assets/fonts/Candor-Semibold.ttf";
-const CandorSemiBoldItalic = "assets/fonts/Candor-SemiboldItalic.ttf";
-const CandorThin = "assets/fonts/Candor-Thin.ttf";
-const CandorThinItalic = "assets/fonts/Candor-ThinItalic.ttf";
-const UniSansSemiBold = "assets/fonts/UniSans-SemiBold.ttf";
-const UniSansRegular = "assets/fonts/UniSans-Regular.ttf";
+import Black from "assets/fonts/Black.ttf";
+import BlackItalic from "assets/fonts/BlackItalic.ttf";
+import Bold from "assets/fonts/Bold.ttf";
+import BoldItalic from "assets/fonts/BoldItalic.ttf";
+import Light from "assets/fonts/Light.ttf";
+import LightItalic from "assets/fonts/LightItalic.ttf";
+import Medium from "assets/fonts/Medium.ttf";
+import MediumItalic from "assets/fonts/MediumItalic.ttf";
+import Roman from "assets/fonts/Roman.ttf";
+import RomanItalic from "assets/fonts/RomanItalic.ttf";
+import Thin from "assets/fonts/Thin.ttf";
+import ThinItalic from "assets/fonts/ThinItalic.ttf";
+import XThin from "assets/fonts/XThin.ttf";
+import XThinItalic from "assets/fonts/XThinItalic.ttf";
+import XXThin from "assets/fonts/XXThin.ttf";
+import XXThinItalic from "assets/fonts/XXThinItalic.ttf";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -69,7 +69,7 @@ table {
 }
 body, #root {
     height: 100vh;
-    font-family: "Candor", sans-serif;
+    font-family: "NeueHaas", sans-serif;
 }
 
 .icon-4xs {
@@ -100,100 +100,100 @@ body, #root {
   font-size: 4.6rem;
 }
 
-
 @font-face {
-    font-family: UniSans;
-    font-style: normal; 
-    font-weight: 700; 
-    src: url(${UniSansSemiBold}) format('opentype')
-}
-@font-face {
-    font-family: UniSans;
-    font-style: normal; 
-    font-weight: 400; 
-    src: url(${UniSansRegular}) format('opentype')
-}
-@font-face {
-    font-family: Candor;
-    font-style: normal; 
-    font-weight: 400; 
-    src: url(${CandorRegular}) format('opentype')
-}
-@font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: normal; 
     font-weight: 900; 
-    src: url(${CandorBlack}) format('opentype')
+    src: url(${Black}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
-    font-weight: 400; 
-    src: url(${CandorBlackItalic}) format('opentype')
+    font-weight: 900; 
+    src: url(${BlackItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: normal; 
     font-weight: 700; 
-    src: url(${CandorBold}) format('opentype')
+    src: url(${Bold}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
     font-weight: 700; 
-    src: url(${CandorBoldItalic}) format('opentype')
+    src: url(${BoldItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: normal; 
-    font-weight: 300; 
-    src: url(${CandorLight}) format('opentype')
+    font-weight: 600; 
+    src: url(${Medium}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
-    font-weight: 300; 
-    src: url(${CandorLightItalic}) format('opentype')
+    font-weight: 600; 
+    src: url(${MediumItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: normal; 
     font-weight: 500; 
-    src: url(${CandorMedium}) format('opentype')
+    src: url(${Roman}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
     font-weight: 500; 
-    src: url(${CandorMediumItalic}) format('opentype')
+    src: url(${RomanItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
+    font-style: normal; 
+    font-weight: 400; 
+    src: url(${Light}) format('opentype')
+}
+@font-face {
+    font-family: NeueHaas;
     font-style: italic; 
     font-weight: 400; 
-    src: url(${CandorRegularItalic}) format('opentype')
+    src: url(${LightItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: normal; 
-    font-weight: 600; 
-    src: url(${CandorSemiBold}) format('opentype')
+    font-weight: 300; 
+    src: url(${Thin}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
-    font-weight: 600; 
-    src: url(${CandorSemiBoldItalic}) format('opentype')
+    font-weight: 300; 
+    src: url(${ThinItalic}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
+    font-style: normal; 
+    font-weight: 200; 
+    src: url(${XThin}) format('opentype')
+}
+@font-face {
+    font-family: NeueHaas;
+    font-style: italic; 
+    font-weight: 200; 
+    src: url(${XThinItalic}) format('opentype')
+}
+@font-face {
+    font-family: NeueHaas;
     font-style: normal; 
     font-weight: 100; 
-    src: url(${CandorThin}) format('opentype')
+    src: url(${XXThin}) format('opentype')
 }
 @font-face {
-    font-family: Candor;
+    font-family: NeueHaas;
     font-style: italic; 
     font-weight: 100; 
-    src: url(${CandorThinItalic}) format('opentype')
-}`;
+    src: url(${XXThinItalic}) format('opentype')
+}
+`;

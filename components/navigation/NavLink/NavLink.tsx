@@ -1,23 +1,30 @@
 import * as S from "./NavLink.styled";
-import React from "react";
+import React, { forwardRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 type Props = React.PropsWithChildren<{
   href: string;
+  name?: string;
   arrow?: boolean;
   icon?: React.ReactNode;
   block?: boolean;
 }>;
 
-export const NavLink: React.FC<Props> = (props) => {
+interface NavLinkRef extends HTMLDivElement {
+  attributes: NamedNodeMap & {
+    "data-name": Attr;
+  };
+}
+
+export const NavLink = forwardRef<NavLinkRef, Props>((props, ref) => {
   const router = useRouter();
   const activeLink = router.pathname === props.href;
 
   return (
     <Link href={props.href} passHref legacyBehavior>
       <S.NavLinkWrapper>
-        <S.NavLink>
+        <S.NavLink ref={ref} data-name={props.name || props.href}>
           {!props.icon && props.arrow && (
             <S.ChevronRight color="white" className="icon-xs" />
           )}
@@ -31,4 +38,4 @@ export const NavLink: React.FC<Props> = (props) => {
       </S.NavLinkWrapper>
     </Link>
   );
-};
+});

@@ -36,6 +36,8 @@ module.exports = {
     "import/no-unresolved": "error",
     "import/no-default-export": "error",
     "import/no-cycle": "off",
+    "react/display-name": "off",
+    "import/no-default-export": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/explicit-function-return-type": "off",

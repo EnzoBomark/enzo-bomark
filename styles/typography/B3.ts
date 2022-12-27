@@ -5,5 +5,6 @@ type Props = IRegular;
 
 export const B3 = styled.p<Props>`
   font-size: 1.2rem;
+  line-height: 1.8rem;
   ${Regular}
 `;
