@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div
       style={{
-        backgroundColor: "white",
+        // backgroundColor: "white",
         display: "flex",
         justifyContent: "center",
       }}
@@ -13,7 +13,8 @@ const Home = () => {
       <div
         style={{
           width: "100vw",
-          maxWidth: "996px",
+          maxWidth: "772px",
+          padding: "16px",
         }}
       >
         <S.H1 regular color="g900">

@@ -59,7 +59,6 @@ export const NavBlock = forwardRef<NavBlockRef, Props>((props, ref) => {
 
   return (
     <S.NavBlockContainer isHidden={isHidden} isHovering={props.isHovering}>
-      <S.NavBlockContentArrow position={arrowPosition} />
       <S.NavBlockContent
         position={blockPosition}
         ref={ref}
@@ -75,6 +74,7 @@ export const NavBlock = forwardRef<NavBlockRef, Props>((props, ref) => {
           </S.ChildrenContainer>
         </S.NavBlockContentInner>
       </S.NavBlockContent>
+      <S.NavBlockContentArrow position={arrowPosition} />
     </S.NavBlockContainer>
   );
 });

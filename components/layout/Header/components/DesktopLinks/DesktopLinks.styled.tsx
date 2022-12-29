@@ -1,9 +1,66 @@
 import styled from "styled-components";
+import { B3 } from "styles";
 
-export const BlockContainer = styled.div`
-  width: 50rem;
+export const DropDownContainer = styled.div`
+  animation: fadeIn 0.4s ease-in-out;
 `;
 
-export const BlockContent = styled.div``;
+export const DropDownContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+
+export const DropDownContentDivider = styled.div`
+  width: 1px;
+  height: inherit;
+  background-color: ${({ theme }) => theme.color.g100};
+
+  margin: ${({ theme }) => theme.spacing.m} 0;
+`;
+
+export const DropDownContentLatest = styled.div`
+  width: 25rem;
+  padding: ${({ theme }) => theme.spacing.m};
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.m};
+`;
+
+export const DropDownContentLatestList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.s};
+`;
+
+export const DropDownContentLatestListItem = styled(B3)`
+  margin: 0;
+  color: ${({ theme }) => theme.color.g500};
+`;
+
+export const DropDownContentCategories = styled.div`
+  width: 15rem;
+  padding: ${({ theme }) => theme.spacing.m};
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.m};
+`;
+
+export const DropDownContentCategoriesList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.s};
+`;
+
+export const DropDownContentCategoriesListItem = styled(B3)`
+  margin: 0;
+  color: ${({ theme }) => theme.color.g500};
+`;
+
+export const DropDownExtra = styled.div`
+  border-top: 1px solid ${({ theme }) => theme.color.g100};
+  padding: ${({ theme }) => theme.spacing.m};
+  background-color: ${({ theme }) => theme.color.g100}66;
+`;
 
 export * from "styles";

@@ -5,7 +5,8 @@ export const BarOne = styled.div`
   height: 1.5px;
   background-color: ${(props) => props.theme.color.g200};
   margin: 6px 0;
-  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  transition: background-color 0.1s ease-in-out,
+    transform 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
   border-radius: 1px;
 `;
 
@@ -15,7 +16,8 @@ export const BarTwo = styled.div`
   background-color: ${(props) => props.theme.color.g200};
   margin: 6px 0;
   border-radius: 2px;
-  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  transition: background-color 0.1s ease-in-out,
+    transform 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 `;
 
 export const Hamburger = styled.div<{ isOpen: boolean }>`
@@ -34,6 +36,16 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
       props.isOpen
         ? "rotate(-45deg) translate(2px, -2.5px)"
         : "rotate(0deg) translate(0px, px)"};
+  }
+
+  &:hover {
+    ${BarOne} {
+      background-color: ${(props) => props.theme.color.g300};
+    }
+
+    ${BarTwo} {
+      background-color: ${(props) => props.theme.color.g300};
+    }
   }
 `;
 

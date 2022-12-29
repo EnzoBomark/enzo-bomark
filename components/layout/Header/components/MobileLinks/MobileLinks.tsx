@@ -10,14 +10,17 @@ export const MobileLinks = () => {
       <NavLink href="/posts" arrow>
         Posts
       </NavLink>
-      <NavLink href="/templates" arrow>
-        Templates
+      <NavLink href="/projects" arrow>
+        Projects
       </NavLink>
       <NavLink href="/snippets" arrow>
         Snippets
       </NavLink>
       <NavLink href="/about" arrow>
         About
+      </NavLink>
+      <NavLink href="/work" arrow>
+        Work
       </NavLink>
     </>
   );

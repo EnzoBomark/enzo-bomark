@@ -4,7 +4,6 @@ export const NavBlockContainer = styled.div<{
   isHovering: boolean;
   isHidden: boolean;
 }>`
-  animation: fadeIn 0.4s;
   transition: all 0.2s ease-in-out;
 
   ${(props) =>
@@ -37,24 +36,34 @@ export const NavBlockContentArrow = styled.div<{
   transform: translateX(-50%);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 6px solid ${(props) => props.theme.color.g0}cc;
-  backdrop-filter: blur(10px);
+  border-bottom: 6px solid ${(props) => props.theme.color.g50};
   top: calc(100% + 4px);
   left: ${(props) => props.position}px;
   transition: all 0.2s ease-in-out;
 
-  /* &::after {
+  &::before {
     content: "";
     position: absolute;
-    top: -6px;
+    bottom: -7px;
+    left: var(--position);
+    width: 12px;
+    height: 1px;
+    background-color: ${(props) => props.theme.color.g50};
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
     left: var(--position);
     width: 10px;
     height: 10px;
     background-color: transparent;
     transform: translateX(-50%) rotate(45deg);
-    border-top: 1px solid ${(props) => props.theme.color.g100}99;
-    border-left: 1px solid ${(props) => props.theme.color.g100}99;
-  } */
+    border-top: 1px solid ${(props) => props.theme.color.g100};
+    border-left: 1px solid ${(props) => props.theme.color.g100};
+  }
 `;
 
 export const NavBlockContent = styled.div<{
@@ -79,10 +88,9 @@ export const NavBlockContentInner = styled.div<{
   width: ${(props) => props.width}px;
   transition: all 0.2s ease-in-out;
 
-  background-color: ${(props) => props.theme.color.g0}cc;
+  background-color: ${(props) => props.theme.color.g50};
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.color.g100}99;
-  backdrop-filter: blur(10px);
+  border: 1px solid ${(props) => props.theme.color.g100};
 `;
 
 export const ChildrenContainer = styled.div`

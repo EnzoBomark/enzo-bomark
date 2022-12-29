@@ -5,6 +5,8 @@ export interface IHeader {
   regular?: boolean;
   align?: "left" | "center" | "right";
   underline?: boolean;
+  margin?: keyof Theme["spacing"];
+  transform?: "uppercase" | "lowercase" | "capitalize";
 }
 
 export const Header = css<IHeader>`
@@ -20,9 +22,11 @@ export const Header = css<IHeader>`
   text-decoration-line: ${({ underline }) =>
     underline ? "underline" : "none"};
 
-  margin: 16px;
+  margin: ${({ margin, theme }) => (margin ? theme.spacing[margin] : "16px")};
 
   word-spacing: 0.2rem;
+
+  text-transform: ${({ transform }) => transform || "none"};
 `;
 
 export interface IRegular {
@@ -30,6 +34,8 @@ export interface IRegular {
   bold?: boolean;
   align?: "left" | "center" | "right";
   underline?: boolean;
+  margin?: keyof Theme["spacing"];
+  transform?: "uppercase" | "lowercase" | "capitalize";
 }
 
 export const Regular = css<IRegular>`
@@ -45,7 +51,9 @@ export const Regular = css<IRegular>`
   text-decoration-line: ${({ underline }) =>
     underline ? "underline" : "none"};
 
-  margin: 16px;
+  margin: ${({ margin, theme }) => (margin ? theme.spacing[margin] : "16px")};
 
   word-spacing: 0.2rem;
+
+  text-transform: ${({ transform }) => transform || "none"};
 `;

@@ -3,9 +3,9 @@ import { useRef, useState, useEffect } from "react";
 
 export const BlockElement = {
   Posts: "posts",
-  Templates: "templates",
+  Projects: "projects",
   Snippets: "snippets",
-  Work: "work",
+  About: "about",
 } as const;
 
 export type BlockElementType = typeof BlockElement[keyof typeof BlockElement];
@@ -29,16 +29,16 @@ export const useHeaderHoverRef = () => {
 
   const navBlockRef = useRef<BlockElementRef>(null);
   const postsRef = useRef<BlockElementRef>(null);
-  const templatesRef = useRef<BlockElementRef>(null);
+  const projectsRef = useRef<BlockElementRef>(null);
   const snippetsRef = useRef<BlockElementRef>(null);
-  const workRef = useRef<BlockElementRef>(null);
+  const aboutRef = useRef<BlockElementRef>(null);
 
   const [isHovering, refElement] = useHover([
     navBlockRef,
     postsRef,
-    templatesRef,
+    projectsRef,
     snippetsRef,
-    workRef,
+    aboutRef,
   ]);
 
   useEffect(() => {
@@ -58,9 +58,9 @@ export const useHeaderHoverRef = () => {
   return {
     navBlockRef,
     postsRef,
-    templatesRef,
+    projectsRef,
     snippetsRef,
-    workRef,
+    aboutRef,
     element,
     isHovering,
   };
