@@ -15,6 +15,8 @@ export const HeaderContainer = styled.header<{ isOpen: boolean }>`
   justify-content: center;
 
   transition: background-color 0.2s;
+
+  z-index: 100;
 `;
 
 export const HeaderInner = styled.div`
