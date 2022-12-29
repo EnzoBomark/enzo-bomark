@@ -4,7 +4,7 @@ export const NavBlockContainer = styled.div<{
   isHovering: boolean;
   isHidden: boolean;
 }>`
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 
   ${(props) =>
     props.isHovering
@@ -39,7 +39,7 @@ export const NavBlockContentArrow = styled.div<{
   border-bottom: 6px solid ${(props) => props.theme.color.g50};
   top: calc(100% + 4px);
   left: ${(props) => props.position}px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 
   &::before {
     content: "";
@@ -73,7 +73,7 @@ export const NavBlockContent = styled.div<{
   top: 100%;
   left: ${(props) => props.position}px;
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
   transform: translateX(-50%);
   padding-top: 10px;
 `;
@@ -86,7 +86,7 @@ export const NavBlockContentInner = styled.div<{
   min-height: 5rem;
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
 
   background-color: ${(props) => props.theme.color.g50};
   border-radius: 4px;

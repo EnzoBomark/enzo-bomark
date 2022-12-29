@@ -2,7 +2,19 @@ import styled from "styled-components";
 import { B3 } from "styles";
 
 export const DropDownContainer = styled.div`
-  animation: fadeIn 0.4s ease-in-out;
+  @keyframes fadeInWithDelay {
+    0% {
+      opacity: 0;
+    }
+    33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  animation: fadeInWithDelay 0.6s ease;
 `;
 
 export const DropDownContent = styled.div`
