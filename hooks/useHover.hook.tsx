@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEventListener } from "./useEventListener";
+import { useEventListener } from "./useEventListener.hook";
 
 export function useHover<T extends HTMLElement = HTMLElement>(
   elementRef: React.RefObject<T> | ReadonlyArray<React.RefObject<T>>

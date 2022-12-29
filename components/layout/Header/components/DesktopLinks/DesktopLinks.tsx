@@ -1,19 +1,20 @@
 import React from "react";
 import { NavLink } from "components/navigation/NavLink";
-import {
-  useHeaderHoverRef,
-  BlockElementType,
-} from "../../hooks/useHeaderHoverRef";
+import { useHeaderHoverRef, BlockElementType } from "./useHeaderHoverRef.hook";
 import { NavBlock } from "components/navigation/NavBlock";
+import { PostsBlock } from "./PostsBlock.child";
+import { TemplatesBlock } from "./TemplatesBlock.child";
+import { SnippetsBlock } from "./SnippetsBlock.child";
+import { WorkBlock } from "./WorkBlock.child";
 
 export const DesktopLinks = () => {
   const refs = useHeaderHoverRef();
 
   const blockContent: Record<BlockElementType, React.FC> = {
-    posts: () => <div>Posts</div>,
-    templates: () => <div>Templates</div>,
-    snippets: () => <div>Snippets</div>,
-    work: () => <div>Work</div>,
+    posts: PostsBlock,
+    templates: TemplatesBlock,
+    snippets: SnippetsBlock,
+    work: WorkBlock,
   };
 
   return (
@@ -38,18 +39,13 @@ export const DesktopLinks = () => {
 
       <NavLink href="/about">About</NavLink>
 
-      {refs.element?.name && (
-        <NavBlock
-          parent={{
-            x: refs.element.rect?.x || 0,
-            y: refs.element.rect?.y || 0,
-            width: refs.element.rect?.width || 0,
-            height: refs.element.rect?.height || 0,
-          }}
-        >
-          {React.createElement(blockContent[refs.element?.name])}
-        </NavBlock>
-      )}
+      <NavBlock
+        isHovering={refs.isHovering}
+        ref={refs.navBlockRef}
+        rect={refs.element?.rect}
+      >
+        {refs.element && React.createElement(blockContent[refs.element?.name])}
+      </NavBlock>
     </>
   );
 };
