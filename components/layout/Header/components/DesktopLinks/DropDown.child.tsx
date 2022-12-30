@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./DesktopLinks.styled";
+import * as S from "./DesktopLinks.styles";
 import { BlockElementType } from "./useHeaderHoverRef.hook";
 
 type Props = {

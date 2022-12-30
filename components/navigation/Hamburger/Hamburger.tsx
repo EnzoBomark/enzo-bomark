@@ -1,4 +1,4 @@
-import * as S from "./Hamburger.styled";
+import * as S from "./Hamburger.styles";
 import React from "react";
 
 type Props = {

@@ -1,4 +1,4 @@
-import * as S from "./NavLink.styled";
+import * as S from "./NavLink.styles";
 import React, { forwardRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";

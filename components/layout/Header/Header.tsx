@@ -1,4 +1,4 @@
-import * as S from "./Header.styled";
+import * as S from "./Header.styles";
 import React from "react";
 import Link from "next/link";
 import Logo from "assets/icons/Logo.svg";

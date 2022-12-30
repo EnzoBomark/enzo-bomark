@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./FadeInOnScroll.styled";
+import * as S from "./FadeInOnScroll.styles";
 import useIntersectionObserver from "hooks/useIntersectionObserver.hook";
 
 interface Args extends IntersectionObserverInit {
