@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect.hook";
+import { useRef, useState } from 'react';
+import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect.hook';
 
 interface Args extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;

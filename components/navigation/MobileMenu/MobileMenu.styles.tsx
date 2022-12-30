@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { device } from "styles";
+import styled, { css } from 'styled-components';
+import { device } from 'styles';
 
 const isOpen = css`
   transform: translateX(0);
@@ -46,4 +46,4 @@ export const NavLinksWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export * from "styles";
+export * from 'styles';

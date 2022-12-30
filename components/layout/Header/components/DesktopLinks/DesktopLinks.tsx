@@ -1,8 +1,8 @@
-import React from "react";
-import { NavLink } from "components/navigation/NavLink";
-import { useHeaderHoverRef } from "./useHeaderHoverRef.hook";
-import { NavBlock } from "components/navigation/NavBlock";
-import { DropDown } from "./DropDown.child";
+import React from 'react';
+import { NavLink } from 'components/navigation/NavLink';
+import { useHeaderHoverRef } from './useHeaderHoverRef.hook';
+import { NavBlock } from 'components/navigation/NavBlock';
+import { DropDown } from './DropDown.child';
 
 export const DesktopLinks = () => {
   const refs = useHeaderHoverRef();

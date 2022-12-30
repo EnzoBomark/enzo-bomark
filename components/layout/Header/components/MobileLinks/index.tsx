@@ -1,1 +1,1 @@
-export { MobileLinks } from "./MobileLinks";
+export { MobileLinks } from './MobileLinks';

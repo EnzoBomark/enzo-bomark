@@ -1,11 +1,11 @@
-import { useHover } from "hooks/useHover.hook";
-import { useRef, useState, useEffect } from "react";
+import { useHover } from 'hooks/useHover.hook';
+import { useRef, useState, useEffect } from 'react';
 
 export const BlockElement = {
-  Posts: "posts",
-  Projects: "projects",
-  Snippets: "snippets",
-  About: "about",
+  Posts: 'posts',
+  Projects: 'projects',
+  Snippets: 'snippets',
+  About: 'about',
 } as const;
 
 export type BlockElementType = typeof BlockElement[keyof typeof BlockElement];
@@ -17,8 +17,8 @@ type Element = {
 
 export interface BlockElementRef extends HTMLDivElement {
   attributes: NamedNodeMap & {
-    "data-is-nav-block": Attr;
-    "data-name": Attr & {
+    'data-is-nav-block': Attr;
+    'data-name': Attr & {
       value: BlockElementType;
     };
   };
@@ -43,14 +43,14 @@ export const useHeaderHoverRef = () => {
 
   useEffect(() => {
     if (
-      refElement?.current?.attributes?.["data-is-nav-block"] ||
-      !refElement?.current?.attributes?.["data-name"]?.value ||
+      refElement?.current?.attributes?.['data-is-nav-block'] ||
+      !refElement?.current?.attributes?.['data-name']?.value ||
       !refElement?.current?.getBoundingClientRect()
     )
       return;
 
     setElement({
-      name: refElement?.current?.attributes?.["data-name"].value,
+      name: refElement?.current?.attributes?.['data-name'].value,
       rect: refElement?.current?.getBoundingClientRect(),
     });
   }, [refElement]);

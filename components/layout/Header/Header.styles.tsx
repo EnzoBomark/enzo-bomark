@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { device, mediaSize } from "styles";
+import styled from 'styled-components';
+import { device, mediaSize } from 'styles';
 
 export const HeaderContainer = styled.header<{ isOpen: boolean }>`
   position: fixed;
@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header<{ isOpen: boolean }>`
   backdrop-filter: blur(10px);
   border-bottom: 1px solid ${(props) => props.theme.color.g50}99;
   background-color: ${(props) =>
-    props.theme.color.g0 + (props.isOpen ? "ff" : "cc")};
+    props.theme.color.g0 + (props.isOpen ? 'ff' : 'cc')};
 
   display: flex;
   align-items: center;
@@ -82,4 +82,4 @@ export const SpecialLinksWrapper = styled.nav`
   justify-content: center;
 `;
 
-export * from "styles";
+export * from 'styles';

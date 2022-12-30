@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import NextLink from "next/link";
-import { Regular, IRegular } from "./Default";
+import styled from 'styled-components';
+import NextLink from 'next/link';
+import { Regular, IRegular } from './Default';
 
 type Props = IRegular;
 

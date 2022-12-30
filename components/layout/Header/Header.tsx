@@ -1,12 +1,12 @@
-import * as S from "./Header.styles";
-import React from "react";
-import Link from "next/link";
-import Logo from "assets/icons/Logo.svg";
-import { Hamburger } from "components/navigation/Hamburger";
-import { MobileMenu } from "components/navigation/MobileMenu";
-import { useHamburger } from "./useHamburger.hook";
-import { MobileLinks } from "./components/MobileLinks";
-import { DesktopLinks } from "./components/DesktopLinks";
+import * as S from './Header.styles';
+import React from 'react';
+import Link from 'next/link';
+import Logo from 'assets/icons/Logo.svg';
+import { Hamburger } from 'components/navigation/Hamburger';
+import { MobileMenu } from 'components/navigation/MobileMenu';
+import { useHamburger } from './useHamburger.hook';
+import { MobileLinks } from './components/MobileLinks';
+import { DesktopLinks } from './components/DesktopLinks';
 
 export const Header = () => {
   const [isHamburgerActive, toggleHamburger] = useHamburger();

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const NavBlockContainer = styled.div<{
   isHovering: boolean;
@@ -42,7 +42,7 @@ export const NavBlockContentArrow = styled.div<{
   transition: all 0.2s ease;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -7px;
     left: var(--position);
@@ -53,7 +53,7 @@ export const NavBlockContentArrow = styled.div<{
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 1px;
     left: var(--position);
@@ -98,4 +98,4 @@ export const ChildrenContainer = styled.div`
   height: fit-content;
 `;
 
-export * from "styles";
+export * from 'styles';

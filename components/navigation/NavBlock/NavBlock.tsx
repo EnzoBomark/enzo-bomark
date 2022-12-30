@@ -1,7 +1,7 @@
-import * as S from "./NavBlock.styles";
-import React, { forwardRef, useEffect, useMemo, useState } from "react";
-import { useResizeObserver } from "hooks/useResizeObserver.hook";
-import { mediaSize } from "./NavBlock.styles";
+import * as S from './NavBlock.styles';
+import React, { forwardRef, useEffect, useMemo, useState } from 'react';
+import { useResizeObserver } from 'hooks/useResizeObserver.hook';
+import { mediaSize } from './NavBlock.styles';
 
 type Props = React.PropsWithChildren<{
   isHovering: boolean;
@@ -10,7 +10,7 @@ type Props = React.PropsWithChildren<{
 
 interface NavBlockRef extends HTMLDivElement {
   attributes: NamedNodeMap & {
-    "data-is-nav-block": Attr;
+    'data-is-nav-block': Attr;
   };
 }
 
@@ -30,7 +30,7 @@ export const NavBlock = forwardRef<NavBlockRef, Props>((props, ref) => {
   }, [props.isHovering]);
 
   const blockPosition = useMemo(() => {
-    if (typeof window === "undefined") return 0;
+    if (typeof window === 'undefined') return 0;
     const width = window.innerWidth || 0;
     const centerOfScreen = width / 2;
     const centerOfParent = (props.rect?.x || 0) + (props.rect?.width || 0) / 2;
@@ -51,7 +51,7 @@ export const NavBlock = forwardRef<NavBlockRef, Props>((props, ref) => {
   }, [props.rect, childRect]);
 
   const arrowPosition = useMemo(() => {
-    if (typeof window === "undefined") return 0;
+    if (typeof window === 'undefined') return 0;
     const width = window.innerWidth || 0;
     const offset = width > mediaSize.xl ? (width - mediaSize.xl) / 2 : 0;
     return (props.rect?.x || 0) + (props.rect?.width || 0) / 2 - offset;

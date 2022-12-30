@@ -1,5 +1,5 @@
-import * as S from "./MobileMenu.styles";
-import React from "react";
+import * as S from './MobileMenu.styles';
+import React from 'react';
 
 type Props = React.PropsWithChildren<{ isOpen: boolean }>;
 

@@ -1,1 +1,1 @@
-export { FadeInOnScroll } from "./FadeInOnScroll";
+export { FadeInOnScroll } from './FadeInOnScroll';

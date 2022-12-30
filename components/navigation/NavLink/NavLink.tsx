@@ -1,7 +1,7 @@
-import * as S from "./NavLink.styles";
-import React, { forwardRef } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import * as S from './NavLink.styles';
+import React, { forwardRef } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type Props = React.PropsWithChildren<{
   href: string;
@@ -13,7 +13,7 @@ type Props = React.PropsWithChildren<{
 
 interface NavLinkRef extends HTMLDivElement {
   attributes: NamedNodeMap & {
-    "data-name": Attr;
+    'data-name': Attr;
   };
 }
 

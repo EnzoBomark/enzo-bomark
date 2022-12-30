@@ -43,49 +43,49 @@ type Theme = {
   };
 
   spacing: {
-    none: "0";
-    xs: "4px";
-    s: "8px";
-    m: "16px";
-    l: "24px";
-    xl: "32px";
-    "2xl": "40px";
-    "3xl": "48px";
-    "4xl": "56px";
-    "5xl": "64px";
-    "6xl": "72px";
-    "7xl": "80px";
-    auto: "auto";
+    none: '0';
+    xs: '4px';
+    s: '8px';
+    m: '16px';
+    l: '24px';
+    xl: '32px';
+    '2xl': '40px';
+    '3xl': '48px';
+    '4xl': '56px';
+    '5xl': '64px';
+    '6xl': '72px';
+    '7xl': '80px';
+    auto: 'auto';
   };
 
   align: {
-    start: "flex-start";
-    center: "center";
-    end: "flex-end";
+    start: 'flex-start';
+    center: 'center';
+    end: 'flex-end';
   };
 
   justify: {
-    start: "flex-start";
-    center: "center";
-    end: "flex-end";
-    even: "space-evenly";
-    around: "space-around";
-    between: "space-between";
+    start: 'flex-start';
+    center: 'center';
+    end: 'flex-end';
+    even: 'space-evenly';
+    around: 'space-around';
+    between: 'space-between';
   };
 
   radius: {
-    none: "0";
-    xs: "4px";
-    s: "8px";
-    m: "16px";
-    l: "24px";
-    xl: "32px";
-    "2xl": "40px";
-    "3xl": "48px";
-    "4xl": "56px";
-    "5xl": "64px";
-    "6xl": "72px";
-    "7xl": "80px";
-    full: "9999px";
+    none: '0';
+    xs: '4px';
+    s: '8px';
+    m: '16px';
+    l: '24px';
+    xl: '32px';
+    '2xl': '40px';
+    '3xl': '48px';
+    '4xl': '56px';
+    '5xl': '64px';
+    '6xl': '72px';
+    '7xl': '80px';
+    full: '9999px';
   };
 };

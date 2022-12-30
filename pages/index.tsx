@@ -1,21 +1,21 @@
-import React from "react";
-import * as S from "styles";
-import { FadeInOnScroll } from "components/shared/FadeInOnScroll";
+import React from 'react';
+import * as S from 'styles';
+import { FadeInOnScroll } from 'components/shared/FadeInOnScroll';
 
 const Home = () => {
   return (
     <div
       style={{
         // backgroundColor: "white",
-        display: "flex",
-        justifyContent: "center",
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
       <div
         style={{
-          width: "100vw",
-          maxWidth: "772px",
-          padding: "16px",
+          width: '100vw',
+          maxWidth: '772px',
+          padding: '16px',
         }}
       >
         <FadeInOnScroll freezeOnceVisible>

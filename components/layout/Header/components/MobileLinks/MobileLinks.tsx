@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "components/navigation/NavLink";
+import React from 'react';
+import { NavLink } from 'components/navigation/NavLink';
 
 export const MobileLinks = () => {
   return (

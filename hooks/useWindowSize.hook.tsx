@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useEventListener } from "./useEventListener.hook";
-import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect.hook";
+import { useState } from 'react';
+import { useEventListener } from './useEventListener.hook';
+import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect.hook';
 
 type WindowSize = {
   width: number;
@@ -20,7 +20,7 @@ export const useWindowSize = (): WindowSize => {
     });
   };
 
-  useEventListener("resize", handleSize);
+  useEventListener('resize', handleSize);
 
   // Set size at the first client-side load
   useIsomorphicLayoutEffect(() => {

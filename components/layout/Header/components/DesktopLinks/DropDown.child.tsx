@@ -1,6 +1,6 @@
-import React from "react";
-import * as S from "./DesktopLinks.styles";
-import { BlockElementType } from "./useHeaderHoverRef.hook";
+import React from 'react';
+import * as S from './DesktopLinks.styles';
+import { BlockElementType } from './useHeaderHoverRef.hook';
 
 type Props = {
   type: BlockElementType;
@@ -31,7 +31,7 @@ export const DropDown: React.FC<Props> = (props) => {
           </S.DropDownContentLatestList>
         </S.DropDownContentLatest>
 
-        {props.type === "posts" && (
+        {props.type === 'posts' && (
           <>
             <S.DropDownContentDivider />
 

@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import IconChevronDown from "assets/icons/ChevronDown.svg";
-import IconChevronRight from "assets/icons/ChevronRight.svg";
-import { B3 as BaseB3 } from "styles";
+import styled from 'styled-components';
+import IconChevronDown from 'assets/icons/ChevronDown.svg';
+import IconChevronRight from 'assets/icons/ChevronRight.svg';
+import { B3 as BaseB3 } from 'styles';
 
 export const ChevronDown = styled(IconChevronDown)`
   position: absolute;
@@ -32,7 +32,7 @@ export const B3 = styled(BaseB3)<{ active: boolean }>`
   font-size: 1.2rem;
   margin: 16px;
   color: ${(props) => props.theme.color.g1000};
-  opacity: ${(props) => (props.active ? "100%" : "60%")};
+  opacity: ${(props) => (props.active ? '100%' : '60%')};
   text-decoration: none;
   transform: translateX(0);
   transition: 0.2s;
@@ -82,4 +82,4 @@ export const NavLink = styled.div`
   }
 `;
 
-export * from "styles";
+export * from 'styles';

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BarOne = styled.div`
   width: 20px;
@@ -27,15 +27,15 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
   ${BarOne} {
     transform: ${(props) =>
       props.isOpen
-        ? "rotate(45deg) translate(3px, 3px)"
-        : "rotate(0deg) translate(0px, 0px)"};
+        ? 'rotate(45deg) translate(3px, 3px)'
+        : 'rotate(0deg) translate(0px, 0px)'};
   }
 
   ${BarTwo} {
     transform: ${(props) =>
       props.isOpen
-        ? "rotate(-45deg) translate(2px, -2.5px)"
-        : "rotate(0deg) translate(0px, px)"};
+        ? 'rotate(-45deg) translate(2px, -2.5px)'
+        : 'rotate(0deg) translate(0px, px)'};
   }
 
   &:hover {
@@ -49,4 +49,4 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-export * from "styles/index";
+export * from 'styles/index';

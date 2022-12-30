@@ -1,5 +1,5 @@
-import * as S from "./Hamburger.styles";
-import React from "react";
+import * as S from './Hamburger.styles';
+import React from 'react';
 
 type Props = {
   isOpen: boolean;

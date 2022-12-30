@@ -1,1 +1,1 @@
-export { DesktopLinks } from "./DesktopLinks";
+export { DesktopLinks } from './DesktopLinks';

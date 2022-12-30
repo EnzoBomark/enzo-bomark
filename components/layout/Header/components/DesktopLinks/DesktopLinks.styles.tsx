@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { B3 } from "styles";
+import styled from 'styled-components';
+import { B3 } from 'styles';
 
 export const DropDownContainer = styled.div`
   @keyframes fadeInWithDelay {
@@ -75,4 +75,4 @@ export const DropDownExtra = styled.div`
   background-color: ${({ theme }) => theme.color.g100}66;
 `;
 
-export * from "styles";
+export * from 'styles';

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Regular, IRegular } from "./Default";
+import styled from 'styled-components';
+import { Regular, IRegular } from './Default';
 
 type Props = IRegular;
 
@@ -10,10 +10,10 @@ export const Caption = styled.p<Props>`
   ${Regular}
 
   ::before {
-    content: "“";
+    content: '“';
   }
 
   ::after {
-    content: "”";
+    content: '”';
   }
 `;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Header, IHeader } from "./Default";
+import { Header, IHeader } from './Default';
 
 type Props = IHeader;
 

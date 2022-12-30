@@ -1,2 +1,2 @@
-export { device, mediaSize } from "./global/device";
-export * from "./typography";
+export { device, mediaSize } from './global/device';
+export * from './typography';

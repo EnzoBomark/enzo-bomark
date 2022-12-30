@@ -1,20 +1,20 @@
-import { createGlobalStyle } from "styled-components";
-import Black from "assets/fonts/Black.ttf";
-import BlackItalic from "assets/fonts/BlackItalic.ttf";
-import Bold from "assets/fonts/Bold.ttf";
-import BoldItalic from "assets/fonts/BoldItalic.ttf";
-import Light from "assets/fonts/Light.ttf";
-import LightItalic from "assets/fonts/LightItalic.ttf";
-import Medium from "assets/fonts/Medium.ttf";
-import MediumItalic from "assets/fonts/MediumItalic.ttf";
-import Roman from "assets/fonts/Roman.ttf";
-import RomanItalic from "assets/fonts/RomanItalic.ttf";
-import Thin from "assets/fonts/Thin.ttf";
-import ThinItalic from "assets/fonts/ThinItalic.ttf";
-import XThin from "assets/fonts/XThin.ttf";
-import XThinItalic from "assets/fonts/XThinItalic.ttf";
-import XXThin from "assets/fonts/XXThin.ttf";
-import XXThinItalic from "assets/fonts/XXThinItalic.ttf";
+import { createGlobalStyle } from 'styled-components';
+import Black from 'assets/fonts/Black.ttf';
+import BlackItalic from 'assets/fonts/BlackItalic.ttf';
+import Bold from 'assets/fonts/Bold.ttf';
+import BoldItalic from 'assets/fonts/BoldItalic.ttf';
+import Light from 'assets/fonts/Light.ttf';
+import LightItalic from 'assets/fonts/LightItalic.ttf';
+import Medium from 'assets/fonts/Medium.ttf';
+import MediumItalic from 'assets/fonts/MediumItalic.ttf';
+import Roman from 'assets/fonts/Roman.ttf';
+import RomanItalic from 'assets/fonts/RomanItalic.ttf';
+import Thin from 'assets/fonts/Thin.ttf';
+import ThinItalic from 'assets/fonts/ThinItalic.ttf';
+import XThin from 'assets/fonts/XThin.ttf';
+import XThinItalic from 'assets/fonts/XThinItalic.ttf';
+import XXThin from 'assets/fonts/XXThin.ttf';
+import XXThinItalic from 'assets/fonts/XXThinItalic.ttf';
 
 export const GlobalStyles = createGlobalStyle`
 
