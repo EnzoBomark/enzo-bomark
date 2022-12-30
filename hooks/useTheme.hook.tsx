@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { DefaultTheme } from 'styled-components';
 
 import { matrix } from 'styles/themes/matrix.theme';
@@ -8,7 +8,7 @@ import { dark } from 'styles/themes/dark.theme';
 const themes = [dark, light, matrix];
 
 export const useTheme = (): [DefaultTheme, () => void] => {
-  const [theme, setTheme] = React.useState(0);
+  const [theme, setTheme] = useState(0);
 
   return [
     themes[theme],

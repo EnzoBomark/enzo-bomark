@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { device } from 'styles';
+import { S as Styles, device } from 'styles';
 
 const isOpen = css`
   transform: translateX(0);
@@ -13,7 +13,7 @@ const isClosed = css`
   opacity: 0;
 `;
 
-export const MobileMenu = styled.div<{ isOpen: boolean }>`
+const MobileMenu = styled.div<{ isOpen: boolean }>`
   position: absolute;
   top: 4.6rem;
   left: 0;
@@ -36,7 +36,7 @@ export const MobileMenu = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-export const NavLinksWrapper = styled.div`
+const NavLinksWrapper = styled.div`
   min-height: 300px;
   width: 100%;
 
@@ -46,4 +46,8 @@ export const NavLinksWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  MobileMenu,
+  NavLinksWrapper,
+};

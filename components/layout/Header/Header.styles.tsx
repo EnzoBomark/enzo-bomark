@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { device, mediaSize } from 'styles';
+import { S as Styles, device, mediaSize } from 'styles';
 
-export const HeaderContainer = styled.header<{ isOpen: boolean }>`
+const HeaderContainer = styled.header<{ isOpen: boolean }>`
   position: fixed;
   width: 100vw;
   height: 4.6rem;
@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header<{ isOpen: boolean }>`
   z-index: 100;
 `;
 
-export const HeaderInner = styled.div`
+const HeaderInner = styled.div`
   position: relative;
   height: 100%;
   max-width: ${mediaSize.xl}px;
@@ -30,7 +30,7 @@ export const HeaderInner = styled.div`
   justify-content: center;
 `;
 
-export const HamburgerWrapper = styled.div`
+const HamburgerWrapper = styled.div`
   position: absolute;
   left: 0px;
 
@@ -43,7 +43,7 @@ export const HamburgerWrapper = styled.div`
   }
 `;
 
-export const IconWrapper = styled.div`
+const IconWrapper = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -60,7 +60,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const NavLinksWrapper = styled.nav`
+const NavLinksWrapper = styled.nav`
   display: none;
   height: 100%;
 
@@ -71,7 +71,7 @@ export const NavLinksWrapper = styled.nav`
   }
 `;
 
-export const SpecialLinksWrapper = styled.nav`
+const SpecialLinksWrapper = styled.nav`
   position: absolute;
   right: 16px;
 
@@ -82,4 +82,12 @@ export const SpecialLinksWrapper = styled.nav`
   justify-content: center;
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  HeaderContainer,
+  HeaderInner,
+  HamburgerWrapper,
+  IconWrapper,
+  NavLinksWrapper,
+  SpecialLinksWrapper,
+};

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { B3 } from 'styles';
+import { S as Styles } from 'styles';
 
-export const DropDownContainer = styled.div`
+const DropDownContainer = styled.div`
   @keyframes fadeInWithDelay {
     0% {
       opacity: 0;
@@ -17,13 +17,13 @@ export const DropDownContainer = styled.div`
   animation: fadeInWithDelay 0.6s ease;
 `;
 
-export const DropDownContent = styled.div`
+const DropDownContent = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
 `;
 
-export const DropDownContentDivider = styled.div`
+const DropDownContentDivider = styled.div`
   width: 1px;
   height: inherit;
   background-color: ${({ theme }) => theme.color.g100};
@@ -31,7 +31,7 @@ export const DropDownContentDivider = styled.div`
   margin: ${({ theme }) => theme.spacing.m} 0;
 `;
 
-export const DropDownContentLatest = styled.div`
+const DropDownContentLatest = styled.div`
   width: 25rem;
   padding: ${({ theme }) => theme.spacing.m};
   display: flex;
@@ -39,18 +39,18 @@ export const DropDownContentLatest = styled.div`
   gap: ${({ theme }) => theme.spacing.m};
 `;
 
-export const DropDownContentLatestList = styled.div`
+const DropDownContentLatestList = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.s};
 `;
 
-export const DropDownContentLatestListItem = styled(B3)`
+const DropDownContentLatestListItem = styled(Styles.B3)`
   margin: 0;
   color: ${({ theme }) => theme.color.g500};
 `;
 
-export const DropDownContentCategories = styled.div`
+const DropDownContentCategories = styled.div`
   width: 15rem;
   padding: ${({ theme }) => theme.spacing.m};
   display: flex;
@@ -58,21 +58,33 @@ export const DropDownContentCategories = styled.div`
   gap: ${({ theme }) => theme.spacing.m};
 `;
 
-export const DropDownContentCategoriesList = styled.div`
+const DropDownContentCategoriesList = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.s};
 `;
 
-export const DropDownContentCategoriesListItem = styled(B3)`
+const DropDownContentCategoriesListItem = styled(Styles.B3)`
   margin: 0;
   color: ${({ theme }) => theme.color.g500};
 `;
 
-export const DropDownExtra = styled.div`
+const DropDownExtra = styled.div`
   border-top: 1px solid ${({ theme }) => theme.color.g100};
   padding: ${({ theme }) => theme.spacing.m};
   background-color: ${({ theme }) => theme.color.g100}66;
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  DropDownContainer,
+  DropDownContent,
+  DropDownContentDivider,
+  DropDownContentLatest,
+  DropDownContentLatestList,
+  DropDownContentLatestListItem,
+  DropDownContentCategories,
+  DropDownContentCategoriesList,
+  DropDownContentCategoriesListItem,
+  DropDownExtra,
+};

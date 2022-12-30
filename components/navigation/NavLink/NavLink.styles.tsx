@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import IconChevronDown from 'assets/icons/ChevronDown.svg';
 import IconChevronRight from 'assets/icons/ChevronRight.svg';
-import { B3 as BaseB3 } from 'styles';
+import { S as Styles } from 'styles';
 
-export const ChevronDown = styled(IconChevronDown)`
+const ChevronDown = styled(IconChevronDown)`
   position: absolute;
   opacity: 0.4;
   top: calc(50% + 0.9rem);
@@ -12,7 +12,7 @@ export const ChevronDown = styled(IconChevronDown)`
   transform: translateX(-50%);
 `;
 
-export const ChevronRight = styled(IconChevronRight)`
+const ChevronRight = styled(IconChevronRight)`
   position: absolute;
   left: 0;
   opacity: 0;
@@ -20,7 +20,7 @@ export const ChevronRight = styled(IconChevronRight)`
   transition: 0.2s;
 `;
 
-export const IconWrapper = styled.div`
+const IconWrapper = styled.div`
   position: absolute;
   left: 0;
   opacity: 0;
@@ -28,7 +28,7 @@ export const IconWrapper = styled.div`
   transition: 0.2s;
 `;
 
-export const B3 = styled(BaseB3)<{ active: boolean }>`
+const B3 = styled(Styles.B3)<{ active: boolean }>`
   font-size: 1.2rem;
   margin: 16px;
   color: ${(props) => props.theme.color.g1000};
@@ -38,7 +38,7 @@ export const B3 = styled(BaseB3)<{ active: boolean }>`
   transition: 0.2s;
 `;
 
-export const NavLinkWrapper = styled.a`
+const NavLinkWrapper = styled.a`
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -50,7 +50,7 @@ export const NavLinkWrapper = styled.a`
   cursor: pointer;
 `;
 
-export const NavLink = styled.div`
+const NavLink = styled.div`
   position: relative;
   height: 100%;
 
@@ -82,4 +82,12 @@ export const NavLink = styled.div`
   }
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  ChevronDown,
+  ChevronRight,
+  IconWrapper,
+  B3,
+  NavLinkWrapper,
+  NavLink,
+};

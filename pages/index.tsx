@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from 'styles';
+import { S } from 'styles';
 import { FadeInOnScroll } from 'components/shared/FadeInOnScroll';
 
 const Home = () => {

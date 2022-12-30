@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { S as Styles } from 'styles';
 
-export const NavBlockContainer = styled.div<{
+const NavBlockContainer = styled.div<{
   isHovering: boolean;
   isHidden: boolean;
 }>`
@@ -27,7 +28,7 @@ export const NavBlockContainer = styled.div<{
         `}
 `;
 
-export const NavBlockContentArrow = styled.div<{
+const NavBlockContentArrow = styled.div<{
   position: number;
 }>`
   position: absolute;
@@ -66,7 +67,7 @@ export const NavBlockContentArrow = styled.div<{
   }
 `;
 
-export const NavBlockContent = styled.div<{
+const NavBlockContent = styled.div<{
   position: number;
 }>`
   position: absolute;
@@ -78,7 +79,7 @@ export const NavBlockContent = styled.div<{
   padding-top: 10px;
 `;
 
-export const NavBlockContentInner = styled.div<{
+const NavBlockContentInner = styled.div<{
   width: number | undefined;
   height: number | undefined;
 }>`
@@ -93,9 +94,16 @@ export const NavBlockContentInner = styled.div<{
   border: 1px solid ${(props) => props.theme.color.g100};
 `;
 
-export const ChildrenContainer = styled.div`
+const ChildrenContainer = styled.div`
   width: fit-content;
   height: fit-content;
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  NavBlockContainer,
+  NavBlockContentArrow,
+  NavBlockContent,
+  NavBlockContentInner,
+  ChildrenContainer,
+};

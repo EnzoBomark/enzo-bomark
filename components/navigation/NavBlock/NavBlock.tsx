@@ -1,7 +1,7 @@
-import * as S from './NavBlock.styles';
 import React, { forwardRef, useEffect, useMemo, useState } from 'react';
+import { S } from './NavBlock.styles';
 import { useResizeObserver } from 'hooks/useResizeObserver.hook';
-import { mediaSize } from './NavBlock.styles';
+import { mediaSize } from 'styles';
 
 type Props = React.PropsWithChildren<{
   isHovering: boolean;

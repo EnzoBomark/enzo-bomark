@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { S as Styles } from 'styles';
 
-export const FadeInOnScrollContainer = styled.div<{
+const FadeInOnScrollContainer = styled.div<{
   isVisible: boolean;
 }>`
   transition: all 0.9s ease;
@@ -17,4 +18,7 @@ export const FadeInOnScrollContainer = styled.div<{
         `}
 `;
 
-export * from 'styles';
+export const S = {
+  ...Styles,
+  FadeInOnScrollContainer,
+};

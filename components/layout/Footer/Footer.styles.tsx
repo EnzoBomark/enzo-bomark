@@ -1,5 +1,10 @@
-import React from 'react';
+import styled from 'styled-components';
 
-export const Footer = () => {
-  return <div>Footer</div>;
-};
+export const FooterContainer = styled.footer`
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+`;
+
+export { S } from 'styles';

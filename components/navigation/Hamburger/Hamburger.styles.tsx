@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { S as Styles } from 'styles';
 
-export const BarOne = styled.div`
+const BarOne = styled.div`
   width: 20px;
   height: 1.5px;
   background-color: ${(props) => props.theme.color.g200};
@@ -10,7 +11,7 @@ export const BarOne = styled.div`
   border-radius: 1px;
 `;
 
-export const BarTwo = styled.div`
+const BarTwo = styled.div`
   width: 20px;
   height: 1.5px;
   background-color: ${(props) => props.theme.color.g200};
@@ -20,7 +21,7 @@ export const BarTwo = styled.div`
     transform 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 `;
 
-export const Hamburger = styled.div<{ isOpen: boolean }>`
+const Hamburger = styled.div<{ isOpen: boolean }>`
   cursor: pointer;
   padding: 12px 16px;
 
@@ -49,4 +50,9 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-export * from 'styles/index';
+export const S = {
+  ...Styles,
+  BarOne,
+  BarTwo,
+  Hamburger,
+};
