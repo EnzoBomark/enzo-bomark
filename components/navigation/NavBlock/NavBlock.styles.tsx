@@ -92,6 +92,10 @@ const NavBlockContentInner = styled.div<{
   background-color: ${(props) => props.theme.color.g50};
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.color.g100};
+
+  box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.5);
 `;
 
 const ChildrenContainer = styled.div`

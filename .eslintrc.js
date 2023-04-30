@@ -31,6 +31,7 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
     'react/jsx-filename-extension': [0],
+    '@typescript-eslint/no-redeclare': 'off',
     'no-console': 'warn',
     'no-unused-vars': 'warn',
     'prettier/prettier': 'error',

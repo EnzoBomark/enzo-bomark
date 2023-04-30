@@ -5,6 +5,8 @@ import { S as Styles } from 'styles';
 
 const ChevronDown = styled(IconChevronDown)`
   position: absolute;
+  height: 0.8rem;
+  width: 0.8rem;
   opacity: 0.4;
   top: calc(50% + 0.9rem);
 

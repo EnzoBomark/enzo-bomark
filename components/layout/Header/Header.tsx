@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import Logo from 'assets/icons/Logo.svg';
 import { S } from './Header.styles';
 import { Hamburger } from 'components/navigation/Hamburger';
 import { MobileMenu } from 'components/navigation/MobileMenu';
 import { useHamburger } from './useHamburger.hook';
 import { MobileLinks } from './components/MobileLinks';
 import { DesktopLinks } from './components/DesktopLinks';
+import { Icon } from 'assets/icons';
 
 export const Header = () => {
   const [isHamburgerActive, toggleHamburger] = useHamburger();
@@ -20,7 +20,7 @@ export const Header = () => {
 
         <S.IconWrapper>
           <Link href="/">
-            <Logo color="white" className="icon-m" />
+            <Icon type="Logo" width="m" />
           </Link>
         </S.IconWrapper>
 

@@ -67,38 +67,20 @@ table {
  border-collapse: collapse;
  border-spacing: 0;
 }
+
+html {
+  background-color: ${(props) => props.theme.color.g25};
+}
+
 body, #root {
-    height: 100vh;
-    font-family: "NeueHaas", sans-serif;
+  height: fit-content;
+  min-height: 100vh;
+  font-family: "NeueHaas", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.icon-4xs {
-  font-size: .6rem;
-}
 
-.icon-3xs {
-  font-size: .8rem;
-}
-
-.icon-xxs {
-  font-size: 1.2rem;
-}
-
-.icon-xs {
-  font-size: 1.6rem;
-}
-
-.icon-s {
-  font-size: 2.0rem;
-}
-
-.icon-m {
-  font-size: 3.2rem;
-}
-
-.icon-l {
-  font-size: 4.6rem;
-}
 
 @font-face {
     font-family: NeueHaas;

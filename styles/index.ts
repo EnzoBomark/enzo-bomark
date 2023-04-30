@@ -10,6 +10,9 @@ import { H5 } from './typography/H5';
 import { B3 } from './typography/B3';
 import { B2 } from './typography/B2';
 import { B1 } from './typography/B1';
+import { Button } from './buttons/Button';
+import { Margin } from './layout/Margin';
+import { Underline } from './misc/Underline';
 
 export const S = {
   Anchor,
@@ -24,6 +27,9 @@ export const S = {
   B3,
   B2,
   B1,
+  Button,
+  Margin,
+  Underline,
 };
 
 export { device, mediaSize } from './global/device';

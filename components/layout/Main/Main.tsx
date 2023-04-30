@@ -1,10 +1,8 @@
 import React from 'react';
 import { S } from './Main.styles';
 
-type Props = {
-  children: React.ReactNode;
-};
+type Props = React.PropsWithChildren;
 
-export const Main: React.FC<Props> = ({ children }) => {
-  return <S.Main>{children}</S.Main>;
+export const Main: React.FC<Props> = (props) => {
+  return <S.Main>{props.children}</S.Main>;
 };

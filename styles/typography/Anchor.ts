@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Regular, IRegular } from './Default';
+import { Regular } from './Default';
 
-type Props = IRegular;
+type Props = Regular;
 
 export const Anchor = styled.a<Props>`
   font-size: 1.4rem;

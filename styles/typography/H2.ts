@@ -1,8 +1,7 @@
 import styled from 'styled-components';
+import { Header } from './Default';
 
-import { Header, IHeader } from './Default';
-
-type Props = IHeader;
+type Props = Header;
 
 export const H2 = styled.h2<Props>`
   font-size: 4.8rem;

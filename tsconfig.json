@@ -22,6 +22,7 @@
     "target": "es2018",
     "incremental": true,
     "baseUrl": "./",
+    "types": ["./types/global"],
     "paths": {
       "styles/*": ["styles/*"],
       "components/*": ["components/*"],

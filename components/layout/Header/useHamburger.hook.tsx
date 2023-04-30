@@ -1,6 +1,6 @@
 import { useWindowSize } from 'hooks/useWindowSize.hook';
 import { useEffect, useState } from 'react';
-import { mediaSize } from './Header.styles';
+import { mediaSize } from 'styles';
 
 export const useHamburger = () => {
   const window = useWindowSize();
