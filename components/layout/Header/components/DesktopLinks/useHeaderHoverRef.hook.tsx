@@ -1,4 +1,4 @@
-import { useHover } from 'hooks/useHover.hook';
+import { useHover } from 'hooks/useHover';
 import { useRef, useState, useEffect } from 'react';
 
 export const BlockElement = {

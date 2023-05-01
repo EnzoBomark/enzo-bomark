@@ -3,12 +3,12 @@ import 'animate.css';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from 'styles/global/global';
-import { useTheme } from 'hooks/useTheme.hook';
+import { useTheme } from 'hooks/useTheme';
 import { MetaData } from './_metadata';
 import { Layout } from 'components/layout/Layout';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [theme] = useTheme();
+  const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
@@ -25,5 +25,4 @@ const App = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-// eslint-disable-next-line import/no-default-export
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { S } from './FadeInOnScroll.styles';
-import useIntersectionObserver from 'hooks/useIntersectionObserver.hook';
+import useIntersectionObserver from 'hooks/useIntersectionObserver';
 
 interface Args extends IntersectionObserverInit {
   freezeOnceVisible?: boolean;

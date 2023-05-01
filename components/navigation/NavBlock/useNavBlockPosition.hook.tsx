@@ -1,6 +1,6 @@
 import { useMemo, useRef } from 'react';
-import { useResizeObserver } from 'hooks/useResizeObserver.hook';
-import { useWindowSize } from 'hooks/useWindowSize.hook';
+import { useResizeObserver } from 'hooks/useResizeObserver';
+import { useWindowSize } from 'hooks/useWindowSize';
 import { mediaSize } from 'styles';
 
 const initialRect: DOMRect = {

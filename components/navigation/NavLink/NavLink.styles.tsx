@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import IconChevronDown from 'assets/icons/ChevronDown.svg';
 import IconChevronRight from 'assets/icons/ChevronRight.svg';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const ChevronDown = styled(IconChevronDown)`
   position: absolute;
@@ -30,7 +30,7 @@ const IconWrapper = styled.div`
   transition: 0.2s;
 `;
 
-const B3 = styled(Styles.B3)<{ active: boolean }>`
+const B3 = styled(UIElements.B3)<{ active: boolean }>`
   font-size: 1.2rem;
   margin: 16px;
   color: ${(props) => props.theme.color.g1000};
@@ -85,7 +85,7 @@ const NavLink = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   ChevronDown,
   ChevronRight,
   IconWrapper,

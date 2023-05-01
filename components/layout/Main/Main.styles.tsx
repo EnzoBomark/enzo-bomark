@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const Main = styled.main`
   flex: 1;
@@ -7,6 +7,6 @@ const Main = styled.main`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   Main,
 };

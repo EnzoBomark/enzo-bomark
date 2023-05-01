@@ -33,7 +33,7 @@ export const NavLink = forwardRef<NavLinkRef, Props>((props, ref) => {
 
           <S.B3 active={activeLink}>{props.children}</S.B3>
 
-          {props.block && <S.ChevronDown color="white" />}
+          {props.block && <S.ChevronDown />}
         </S.NavLink>
       </S.NavLinkWrapper>
     </Link>

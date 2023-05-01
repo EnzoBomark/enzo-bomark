@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles, mediaSize } from 'styles';
+import { UIElements, mediaSize } from 'styles';
 
 const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.color.g50};
@@ -33,12 +33,12 @@ const FooterInfo = styled.div`
   gap: ${(props) => props.theme.spacing.l};
 `;
 
-const FooterInfoTitle = styled(Styles.H5)`
+const FooterInfoTitle = styled(UIElements.H5)`
   font-weight: 500;
   margin: 0;
 `;
 
-const FooterInfoText = styled(Styles.B1)`
+const FooterInfoText = styled(UIElements.B1)`
   margin: 0;
   color: ${(props) => props.theme.color.g400};
 `;
@@ -74,20 +74,20 @@ const FooterLinksItem = styled.div`
   gap: ${(props) => props.theme.spacing.s};
 `;
 
-const FooterLinksItemTitle = styled(Styles.H5)`
+const FooterLinksItemTitle = styled(UIElements.H5)`
   font-weight: 500;
   margin: 0;
   margin-bottom: ${(props) => props.theme.spacing.m};
 `;
 
-const FooterLinksItemLink = styled(Styles.Anchor)`
+const FooterLinksItemLink = styled(UIElements.Anchor)`
   margin: 0;
 `;
 
 const FooterExtra = styled.div``;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   FooterContainer,
   FooterContent,
   FooterInfo,

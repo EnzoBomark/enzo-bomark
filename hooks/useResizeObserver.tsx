@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect.hook';
+import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
 export function useResizeObserver<T extends HTMLElement = HTMLElement>(
   ref: React.RefObject<T>

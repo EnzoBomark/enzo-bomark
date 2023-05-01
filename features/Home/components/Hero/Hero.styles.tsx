@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const HeroContainer = styled.div`
   position: relative;
@@ -38,6 +38,7 @@ const Bounce = keyframes`
 const BounceArrowContainer = styled.div`
   position: absolute;
   bottom: 2.4rem;
+  cursor: pointer;
 
   transition: transform 0.2s ease;
 
@@ -56,7 +57,7 @@ const BounceArrowContainer = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   HeroContainer,
   HeroInnerContainer,
   BounceArrowContainer,

@@ -18,6 +18,9 @@ import Facebook from './Facebook.svg';
 import LogoWithLogotype from './LogoWithLogotype.svg';
 import Logo from './Logo.svg';
 import Logotype from './Logotype.svg';
+import Sun from './Sun.svg';
+import Moon from './Moon.svg';
+import Bolt from './Bolt.svg';
 
 export const IconsType = {
   ChevronDown: 'ChevronDown',
@@ -38,6 +41,9 @@ export const IconsType = {
   LogoWithLogotype: 'LogoWithLogotype',
   Logo: 'Logo',
   Logotype: 'Logotype',
+  Sun: 'Sun',
+  Moon: 'Moon',
+  Bolt: 'Bolt',
 } as const;
 
 export type IconType = typeof IconsType[keyof typeof IconsType];
@@ -94,7 +100,12 @@ export const Icon: React.FC<Props> = (props) => {
     [IconsType.LogoWithLogotype]: LogoWithLogotype,
     [IconsType.Logo]: Logo,
     [IconsType.Logotype]: Logotype,
+    [IconsType.Sun]: Sun,
+    [IconsType.Moon]: Moon,
+    [IconsType.Bolt]: Bolt,
   }[props.type];
+
+  console.log(theme.color[props.color || 'g1000'], props.color);
 
   return (
     <IconComponent

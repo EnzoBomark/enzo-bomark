@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useEventListener } from './useEventListener.hook';
-import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect.hook';
+import { useEventListener } from './useEventListener';
+import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
 type WindowSize = {
   width: number;

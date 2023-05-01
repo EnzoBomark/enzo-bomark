@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const HeroDetailsContainer = styled.div`
   width: 100vw;
@@ -31,7 +31,7 @@ const DetailWrapper = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   HeroDetailsContainer,
   HeroDetailsInnerContainer,
   DetailWrapper,

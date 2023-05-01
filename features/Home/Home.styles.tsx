@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const HomeContainer = styled.div`
   background-color: ${(props) => props.theme.color.g0};
@@ -9,6 +9,6 @@ const HomeContainer = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   HomeContainer,
 };

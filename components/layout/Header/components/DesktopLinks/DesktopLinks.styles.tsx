@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const DropDownContainer = styled.div`
   @keyframes fadeInWithDelay {
@@ -45,7 +45,7 @@ const DropDownContentLatestList = styled.div`
   gap: ${({ theme }) => theme.spacing.s};
 `;
 
-const DropDownContentLatestListItem = styled(Styles.B3)`
+const DropDownContentLatestListItem = styled(UIElements.B3)`
   margin: 0;
   color: ${({ theme }) => theme.color.g500};
 `;
@@ -64,7 +64,7 @@ const DropDownContentCategoriesList = styled.div`
   gap: ${({ theme }) => theme.spacing.s};
 `;
 
-const DropDownContentCategoriesListItem = styled(Styles.B3)`
+const DropDownContentCategoriesListItem = styled(UIElements.B3)`
   margin: 0;
   color: ${({ theme }) => theme.color.g500};
 `;
@@ -76,7 +76,7 @@ const DropDownExtra = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   DropDownContainer,
   DropDownContent,
   DropDownContentDivider,

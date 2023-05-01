@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles, device, mediaSize } from 'styles';
+import { UIElements, device, mediaSize } from 'styles';
 
 const HeaderContainer = styled.header<{ isOpen: boolean }>`
   position: fixed;
@@ -83,7 +83,7 @@ const SpecialLinksWrapper = styled.nav`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   HeaderContainer,
   HeaderInner,
   HamburgerWrapper,

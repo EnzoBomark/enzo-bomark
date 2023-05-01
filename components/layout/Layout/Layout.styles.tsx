@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const Layout = styled.span`
   position: relative;
@@ -9,6 +9,6 @@ const Layout = styled.span`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   Layout,
 };

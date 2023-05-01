@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const NavBlockContainer = styled.div<{
   isHovering: boolean;
@@ -104,7 +104,7 @@ const ChildrenContainer = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   NavBlockContainer,
   NavBlockContentArrow,
   NavBlockContent,

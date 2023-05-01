@@ -1,4 +1,4 @@
-import { useWindowSize } from 'hooks/useWindowSize.hook';
+import { useWindowSize } from 'hooks/useWindowSize';
 import { useEffect, useState } from 'react';
 import { mediaSize } from 'styles';
 

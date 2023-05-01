@@ -14,7 +14,7 @@ import { Button } from './buttons/Button';
 import { Margin } from './layout/Margin';
 import { Underline } from './misc/Underline';
 
-export const S = {
+export const UIElements = {
   Anchor,
   Caption,
   Detail,

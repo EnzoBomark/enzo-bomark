@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { S as Styles } from 'styles';
+import { UIElements } from 'styles';
 
 const BarOne = styled.div`
   width: 20px;
@@ -51,7 +51,7 @@ const Hamburger = styled.div<{ isOpen: boolean }>`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   BarOne,
   BarTwo,
   Hamburger,

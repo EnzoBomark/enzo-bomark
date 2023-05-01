@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { S as Styles, device } from 'styles';
+import { UIElements, device } from 'styles';
 
 const isOpen = css`
   transform: translateX(0);
@@ -47,7 +47,7 @@ const NavLinksWrapper = styled.div`
 `;
 
 export const S = {
-  ...Styles,
+  ...UIElements,
   MobileMenu,
   NavLinksWrapper,
 };
