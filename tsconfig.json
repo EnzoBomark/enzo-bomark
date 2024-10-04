@@ -1,0 +1,17 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*/__test__"],
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  }
+}
