@@ -1,54 +1,80 @@
 import { state } from './bolt';
 
-let routes = [];
+const loaded_routes = [];
 const active_route = state(null);
 
-function load() {
-  for (const route of routes) {
-    if (route.uri === '*') {
-      continue;
-    }
+export const router = {
+  navigate,
+  init,
+  route,
+};
 
-    const regEx = new RegExp(`^${route.uri}$`);
+function navigate() {
+  return {
+    go,
+    replace,
+    back,
+    forward,
+  };
+}
 
-    if (window.location.pathname.match(regEx)) {
-      active_route.value = route.callback.call(this);
-      return;
-    }
+function init(value) {
+  loaded_routes.push(...value);
+  update_active_route();
+}
+
+function go(uri) {
+  window.history.pushState({}, '', uri);
+  update_active_route();
+}
+
+function replace(uri) {
+  window.history.replaceState({}, '', uri);
+  update_active_route();
+}
+
+function back() {
+  window.history.back();
+}
+
+function forward() {
+  window.history.forward();
+}
+
+function route() {
+  return active_route;
+}
+
+function update_active_route() {
+  const match = loaded_routes.find(is_route_match);
+
+  console.log('match', match);
+
+  if (match) {
+    active_route.value = match.callback.call(this);
+    return;
   }
 
-  routes.forEach((route) => {
-    if (route.uri === '*') {
-      active_route.value = route.callback.call(this);
-    }
-  });
+  const fallback = loaded_routes.find(is_wildcard_route);
+
+  if (fallback) {
+    active_route.value = fallback.callback.call(this);
+    return;
+  }
 
   throw new Error('Route not found');
 }
 
-export function router(load_routes = []) {
-  routes = load_routes;
-  load();
-
-  return { route: active_route };
+function is_route_match(route) {
+  return !is_wildcard_route(route) && is_path_match(route);
 }
 
-router.go = function go(uri) {
-  window.history.pushState({}, '', uri);
-  load();
-};
+function is_path_match(route) {
+  return window.location.pathname.match(new RegExp(`^${route.uri}$`));
+}
 
-router.replace = function replace(uri) {
-  window.history.replaceState({}, '', uri);
-  load();
-};
+function is_wildcard_route(route) {
+  return route.uri === '*';
+}
 
-router.back = function back() {
-  window.history.back();
-};
-
-router.forward = function forward() {
-  window.history.forward();
-};
-
-window.addEventListener('popstate', load);
+window.addEventListener('popstate', update_active_route);

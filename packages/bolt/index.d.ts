@@ -55,20 +55,32 @@ declare function append(
   ...children: readonly ChildDom[]
 ): Element;
 
-declare function router(
-  routes: readonly {
-    uri: string;
-    callback: () => Element;
-  }[]
-): {
-  route: State<Element>;
+type Route = readonly {
+  readonly uri: string;
+  readonly callback: () => Element;
 };
 
-declare namespace router {
-  function go(uri: string): void;
-  function replace(uri: string): void;
-  function back(): void;
-  function forward(): void;
-}
+declare const router: {
+  navigate: <
+    T extends readonly {
+      readonly uri: string;
+      readonly callback: () => Element;
+    }[],
+  >() => {
+    go: (uri: T[number]['uri']) => void;
+    replace: (uri: T[number]['uri']) => void;
+    back: () => void;
+    forward: () => void;
+  };
+  init: <
+    T extends readonly {
+      readonly uri: string;
+      readonly callback: () => Element;
+    }[],
+  >(
+    routes: T
+  ) => void;
+  route: () => State<Element>;
+};
 
 export { html, append, state, derive, router };
