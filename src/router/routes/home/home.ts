@@ -1,10 +1,8 @@
 import { html } from '@/bolt';
 import { ui } from '~/kernel/ui';
-import { create_route, navigate } from '~/router';
+import { create_route } from '~/router/create_route';
 
 /**
- * rename uri to path
- * rename callback to component
  * add validate query
  *
  * component should receive props
@@ -13,22 +11,14 @@ import { create_route, navigate } from '~/router';
  * - query: based on the zod schema
  */
 
-export const home_route = create_route({
-  uri: '/',
-  callback: () =>
+export const home_route = create_route('/')({
+  component: () =>
     html.div(
       ui.text({ type: 'heading', content: 'Home' }),
-      ui.button({
-        onclick: () => navigate.back(),
-        label: 'Back',
-      }),
-      ui.button({
-        onclick: () => navigate.go('/dashboard'),
-        label: 'Go to dashboard',
-      }),
-      ui.button({
-        onclick: () => navigate.go('/profile'),
-        label: 'Go to profile',
+      ui.link({
+        to: '/profile/:profile_id/post/:post_id',
+        params: { profile_id: '1337', post_id: '69' },
+        content: 'Go to profile',
       })
     ),
 });

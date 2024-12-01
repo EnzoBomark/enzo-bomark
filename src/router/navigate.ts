@@ -1,4 +1,10 @@
 import { router } from '@/bolt';
-import { Routes } from './router';
+import { routes } from './router';
 
-export const navigate = router.navigate<Routes>();
+export { parse_path } from '@/bolt';
+
+export const paths = routes.map(({ path }) => path);
+
+export type Paths = (typeof paths)[number];
+
+export const navigate = router.navigate<Paths>();

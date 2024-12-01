@@ -3,33 +3,33 @@ import { state } from './bolt';
 const loaded_routes = [];
 const active_route = state(null);
 
-export const router = {
-  navigate,
-  init,
-  route,
-};
-
-function navigate() {
-  return {
-    go,
-    replace,
-    back,
-    forward,
-  };
+export function parse_path(options) {
+  return options.params
+    ? options.to.replace(/:\w+/g, (match) => options.params[match.slice(1)])
+    : options.to;
 }
-
-function init(value) {
+export function router(value) {
   loaded_routes.push(...value);
   update_active_route();
+  return { route: active_route };
 }
 
-function go(uri) {
-  window.history.pushState({}, '', uri);
-  update_active_route();
-}
+router.navigate = function () {
+  return {
+    go,
+    back,
+    forward,
+    parse_path,
+  };
+};
 
-function replace(uri) {
-  window.history.replaceState({}, '', uri);
+function go(options) {
+  if (options.replace) {
+    window.history.replaceState({}, '', options.to);
+  } else {
+    window.history.pushState({}, '', options.to);
+  }
+
   update_active_route();
 }
 
@@ -41,24 +41,18 @@ function forward() {
   window.history.forward();
 }
 
-function route() {
-  return active_route;
-}
-
 function update_active_route() {
   const match = loaded_routes.find(is_route_match);
 
-  console.log('match', match);
-
   if (match) {
-    active_route.value = match.callback.call(this);
+    active_route.value = match.component.call(this);
     return;
   }
 
   const fallback = loaded_routes.find(is_wildcard_route);
 
   if (fallback) {
-    active_route.value = fallback.callback.call(this);
+    active_route.value = fallback.component.call(this);
     return;
   }
 
@@ -70,11 +64,12 @@ function is_route_match(route) {
 }
 
 function is_path_match(route) {
-  return window.location.pathname.match(new RegExp(`^${route.uri}$`));
+  const path = window.location.pathname;
+  return path.match(new RegExp(`^${route.path}$`));
 }
 
 function is_wildcard_route(route) {
-  return route.uri === '*';
+  return route.path === '*';
 }
 
 window.addEventListener('popstate', update_active_route);
