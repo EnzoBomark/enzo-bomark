@@ -21,7 +21,10 @@ export type LinkParams<
 declare function router<
   TRoutes extends {
     path: string;
-    component: (options: { params: Record<string, string> }) => Element;
+    component: (options: {
+      params: Record<string, string>;
+      query: Record<string, string>;
+    }) => Element;
   },
 >(
   routes: TPaths
@@ -40,11 +43,17 @@ declare namespace router {
 export declare function create_route<T extends string>(
   path: T
 ): (params: {
-  readonly component: (options: { params: ExtractParams<T> }) => Element;
+  component: (options: {
+    params: ExtractParams<T>;
+    query: Record<string, string>;
+  }) => Element;
 }) => {
   path: T;
   route: () => { path: T } & {
-    readonly component: (options: { params: ExtractParams<T> }) => Element;
+    component: (options: {
+      params: ExtractParams<T>;
+      query: Record<string, string>;
+    }) => Element;
   };
 };
 

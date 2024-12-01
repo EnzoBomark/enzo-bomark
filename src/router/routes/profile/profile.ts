@@ -4,8 +4,8 @@ import { create_route, navigate } from '~/router';
 
 export const profile_route = create_route('/profile/:profile_id/post/:post_id')(
   {
-    component: ({ params }) =>
-      html.div(
+    component: ({ params }) => {
+      return html.div(
         ui.text({ type: 'heading', content: `Profile ${params.profile_id}` }),
         ui.button({
           onclick: () => navigate.back(),
@@ -15,6 +15,7 @@ export const profile_route = create_route('/profile/:profile_id/post/:post_id')(
           to: '/',
           content: 'Go to home',
         })
-      ),
+      );
+    },
   }
 );
