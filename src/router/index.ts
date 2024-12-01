@@ -1,3 +1,3 @@
+export { create_route, parse_path } from '@/bolt';
 export { router_provider } from './router';
-export { create_route } from './create_route';
-export { type Paths, navigate, parse_path } from './navigate';
+export { type Paths, navigate } from './navigate';

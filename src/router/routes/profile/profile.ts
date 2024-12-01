@@ -4,9 +4,9 @@ import { create_route, navigate } from '~/router';
 
 export const profile_route = create_route('/profile/:profile_id/post/:post_id')(
   {
-    component: () =>
+    component: ({ params }) =>
       html.div(
-        ui.text({ type: 'heading', content: 'Profile' }),
+        ui.text({ type: 'heading', content: `Profile ${params.profile_id}` }),
         ui.button({
           onclick: () => navigate.back(),
           label: 'Back',

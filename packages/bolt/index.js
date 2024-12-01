@@ -1,2 +1,2 @@
 export { html, append, state, derive } from './bolt';
-export { router, parse_path } from './router';
+export { router, create_route, parse_path } from './router';

@@ -19,12 +19,12 @@ export type LinkParams<
   : { to: Path; params: ExtractParams<Path>; replace?: boolean };
 
 declare function router<
-  T extends readonly {
+  TRoutes extends {
     path: string;
-    component: () => Element;
-  }[],
+    component: (options: { params: Record<string, string> }) => Element;
+  },
 >(
-  routes: T
+  routes: TPaths
 ): {
   route: State<Element>;
 };
@@ -37,9 +37,20 @@ declare namespace router {
   };
 }
 
+export declare function create_route<T extends string>(
+  path: T
+): (params: {
+  readonly component: (options: { params: ExtractParams<T> }) => Element;
+}) => {
+  path: T;
+  route: () => { path: T } & {
+    readonly component: (options: { params: ExtractParams<T> }) => Element;
+  };
+};
+
 declare function parse_path(props: {
   to: string;
   params?: Record<string, string>;
 }): string;
 
-export { router, parse_path };
+export { router, create_route, parse_path };

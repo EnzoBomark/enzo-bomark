@@ -1,13 +1,11 @@
 import { html } from '@/bolt';
 import { ui } from '~/kernel/ui';
-import { create_route } from '~/router/create_route';
+import { create_route } from '~/router';
 
 /**
  * add validate query
  *
  * component should receive props
- * - path: string
- * - params: (based on path eg. /:id)
  * - query: based on the zod schema
  */
 
