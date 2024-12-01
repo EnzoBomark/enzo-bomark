@@ -1,4 +1,4 @@
-import { State, TagFunc, Tags } from './bolt';
+import { State, TagFunc, Tags } from './dom';
 
 type UnArray<T> = T extends readonly (infer U)[] ? U : T;
 
@@ -6,7 +6,7 @@ type ExtractParam<Path extends string> = Path extends `:${infer Param}`
   ? Record<Param, string>
   : {};
 
-export type ExtractParams<Path extends string> =
+type ExtractParams<Path extends string> =
   Path extends `${infer Segment}/${infer Rest}`
     ? ExtractParam<Segment> & ExtractParams<Rest>
     : ExtractParam<Path>;
@@ -40,7 +40,7 @@ declare namespace router {
   };
 }
 
-export declare function create_route<T extends string>(
+export declare function createRoute<T extends string>(
   path: T
 ): (params: {
   component: (options: {
@@ -57,9 +57,9 @@ export declare function create_route<T extends string>(
   };
 };
 
-declare function parse_path(props: {
+declare function parsePath(props: {
   to: string;
   params?: Record<string, string>;
 }): string;
 
-export { router, create_route, parse_path };
+export { router, createRoute, parsePath };

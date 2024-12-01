@@ -1,4 +1,4 @@
-import { html, Derived } from '@/bolt';
+import { html, Derived } from '@/dom';
 import { classes } from '~/kernel/styles';
 import { styles } from './styles.css';
 

@@ -1,4 +1,4 @@
-import { html } from '@/bolt';
+import { html } from '@/dom';
 import { styles } from './styles.css';
 
 type CardProps = {

@@ -1,1 +1,1 @@
-export { profile_route } from './profile';
+export { profileRoute } from './profile';

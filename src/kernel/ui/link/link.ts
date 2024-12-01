@@ -1,4 +1,4 @@
-import { type Derived, type LinkParams, html, parse_path } from '@/bolt';
+import { type Derived, type LinkParams, derive, html, parsePath } from '@/dom';
 import { type Paths, navigate } from '~/router';
 import { styles } from './styles.css';
 
@@ -9,13 +9,15 @@ type LinkProps = {
 export function link<To extends Paths>(
   props: LinkProps & LinkParams<Paths, To>
 ) {
+  const href = derive(() => parsePath(props));
+
   const onclick = (e: MouseEvent) => {
     e.preventDefault();
     navigate.go(props);
   };
 
   return html.a(
-    { class: styles.container, href: parse_path(props), onclick },
+    { class: styles.container, href: () => href.value, onclick },
     props.content
   );
 }

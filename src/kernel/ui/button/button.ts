@@ -1,4 +1,4 @@
-import { html, Derived } from '@/bolt';
+import { html, Derived } from '@/dom';
 import { styles } from './styles.css';
 
 type ButtonProps = {

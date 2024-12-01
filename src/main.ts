@@ -1,9 +1,9 @@
-import { html, append } from '@/bolt';
+import { html, append } from '@/dom';
 import { rootClass } from './kernel/styles';
-import { router_provider } from './router';
+import { routerProvider } from './router';
 
 function main() {
-  return html.main({ class: rootClass }, router_provider());
+  return html.main({ class: rootClass }, routerProvider());
 }
 
 append(document.body, main());

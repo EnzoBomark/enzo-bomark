@@ -1,8 +1,8 @@
-import { html } from '@/bolt';
+import { html } from '@/dom';
 import { ui } from '~/kernel/ui';
-import { create_route, navigate } from '~/router';
+import { createRoute, navigate } from '~/router';
 
-export const wildcard_route = create_route('*')({
+export const wildcardRoute = createRoute('*')({
   component: () =>
     html.div(
       ui.text({ type: 'heading', content: '404' }),

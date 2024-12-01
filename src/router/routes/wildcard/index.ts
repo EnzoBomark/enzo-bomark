@@ -1,1 +1,1 @@
-export { wildcard_route } from './wildcard';
+export { wildcardRoute } from './wildcard';

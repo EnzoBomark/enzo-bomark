@@ -1,4 +1,4 @@
-import { router } from '@/bolt';
+import { router } from '@/dom';
 import { routes } from './router';
 
 export const paths = routes.map(({ path }) => path);
