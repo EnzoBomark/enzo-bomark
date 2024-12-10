@@ -116,9 +116,11 @@ function append(node, ...children) {
   return node;
 }
 
-function tag(name, ...props) {
+function tag(namespace, name, ...props) {
   const [attributes, ...children] = separateAttributesAndChildren(props);
-  const node = document.createElement(name);
+  const node = namespace
+    ? document.createElementNS(namespace, name)
+    : document.createElement(name);
 
   Object.entries(attributes).forEach(([key, value]) => {
     const isEvent = key.startsWith('on');
@@ -258,8 +260,13 @@ function getDescriptor(proto, key) {
     : undefined;
 }
 
-const factory = () => ({ get: (_, name) => tag.bind(null, name) });
+const factory = (namespace) => ({
+  get: (_, name) => tag.bind(null, namespace, name),
+});
 
-const html = new Proxy(() => new Proxy(tag, factory()), factory());
+const html = new Proxy(
+  (namespace) => new Proxy(tag, factory(namespace)),
+  factory()
+);
 
-export { html, append, state, derive };
+export { append, derive, html, state };

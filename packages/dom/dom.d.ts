@@ -39,11 +39,19 @@ export type TagFunc<Result> = (
   ...rest: readonly ChildDom[]
 ) => Result;
 
+export type NameSpaceTagFunc<Result> = (
+  first?: Record<string, PropValueOrDerived> | ChildDom,
+  ...rest: readonly ChildDom[]
+) => Result;
+
 export type Tags = {
   [K in keyof HTMLElementTagNameMap]: TagFunc<HTMLElementTagNameMap[K]>;
 };
 
-declare const html: Tags;
+declare const html: Tags &
+  ((
+    namespaceURI: string
+  ) => Readonly<Record<string, NameSpaceTagFunc<Element>>>);
 
 declare function state<T>(): State<T | undefined>;
 declare function state<T>(inital: T): State<T>;
@@ -55,4 +63,4 @@ declare function append(
   ...children: readonly ChildDom[]
 ): Element;
 
-export { html, append, state, derive };
+export { append, derive, html, state };

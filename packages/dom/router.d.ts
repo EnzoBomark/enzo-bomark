@@ -15,8 +15,13 @@ export type LinkParams<
   Paths extends string,
   Path extends Paths,
 > = keyof ExtractParams<Path> extends never
-  ? { to: Path; replace?: boolean }
-  : { to: Path; params: ExtractParams<Path>; replace?: boolean };
+  ? { to: Path; query?: Record<string, string>; replace?: boolean }
+  : {
+      to: Path;
+      params: ExtractParams<Path>;
+      query?: Record<string, string>;
+      replace?: boolean;
+    };
 
 declare function router<
   TRoutes extends {

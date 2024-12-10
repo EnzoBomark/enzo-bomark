@@ -1,6 +1,6 @@
 import { html } from '@/dom';
-import { ui } from '~/kernel/ui';
 import { createRoute, navigate } from '~/router';
+import { ui } from '~/ui';
 
 export const wildcardRoute = createRoute('*')({
   component: () =>

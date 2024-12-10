@@ -1,5 +1,5 @@
-import { html, Derived } from '@/dom';
-import { styles } from './styles.css';
+import { Derived, html } from '@/dom';
+import { styles } from './button.css';
 
 type ButtonProps = {
   onclick: () => void;

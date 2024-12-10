@@ -1,5 +1,5 @@
 import { html } from '@/dom';
-import { styles } from './styles.css';
+import { styles } from './card.css';
 
 type CardProps = {
   title?: HTMLElement;

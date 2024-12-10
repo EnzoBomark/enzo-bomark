@@ -4,9 +4,19 @@ const loadedRoutes = [];
 const activeRoute = state(null);
 
 export function parsePath(options) {
-  return options.params
+  const path = options.params
     ? options.to.replace(/:\w+/g, (match) => options.params[match.slice(1)])
     : options.to;
+
+  if (!options.query) {
+    return path;
+  }
+
+  const query = Object.entries(options.query)
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&');
+
+  return `${path}?${query}`;
 }
 
 export function createRoute(path) {

@@ -1,6 +1,6 @@
-import { html, Derived } from '@/dom';
+import { Derived, html } from '@/dom';
 import { classes } from '~/kernel/styles';
-import { styles } from './styles.css';
+import { styles } from './text.css';
 
 type TextProps = {
   content: Derived<string> | Derived<HTMLElement>;

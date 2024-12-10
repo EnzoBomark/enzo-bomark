@@ -1,8 +1,7 @@
 {
-  "name": "tap",
+  "name": "enzobomark",
   "type": "module",
   "version": "0.0.1",
-  "description": "Minimalist ui framework",
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
