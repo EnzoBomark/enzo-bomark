@@ -1,35 +1,85 @@
-import { html } from '@/dom';
+import { derive, html, State, state } from '@/dom';
+import { classes } from '~/kernel/styles';
+import { ui } from '~/ui';
 import { styles } from './header.css';
+import { logo } from './logo';
 
-const { svg, path } = html('http://www.w3.org/2000/svg');
+function createMenu() {
+  const isOpen = state(false);
 
-function logo({ size = 24 }) {
-  return svg(
-    {
-      width: size,
-      height: size,
-      viewBox: '0 0 128 128',
-      fill: 'none',
-      xmlns: 'http://www.w3.org/2000/svg',
-    },
-    path({
-      'fill-rule': 'evenodd',
-      'clip-rule': 'evenodd',
-      d: 'M71.3088 81.2308C70.5345 81.4819 70.0396 82.148 70.0657 82.9044C70.0989 83.8859 70.144 85.2265 70.174 86.1038C70.181 86.306 70.2986 86.497 70.4878 86.6137C70.677 86.7303 70.9136 86.7572 71.1185 86.6854C74.06 85.654 83.9307 82.206 98.1681 77.3684C111.405 72.8707 113.899 60.9127 109.103 58.2094C108.774 58.023 108.542 57.7231 108.461 57.3856C108.381 57.0476 108.461 56.7026 108.682 56.4354C112.584 51.7327 114.091 38.1475 92.8768 45.5056L52.4437 59.5297L54.5826 64.1151C54.5826 64.1151 85.1638 53.3893 98.3362 48.8121C107.645 45.5772 106.137 55.0183 97.2565 58.0986C87.1898 61.5902 58.2273 71.7028 58.2273 71.7028L60.3231 76.1243C60.3231 76.1243 100.668 62.6978 102.084 62.2109C106.729 60.6152 105.777 69.6103 95.592 73.1428C87.1774 76.0613 75.2134 79.9631 71.3088 81.2308Z',
-      fill: 'currentColor',
+  const toggle = () => (isOpen.value = !isOpen.value);
+
+  const variant = derive(() => (isOpen.value ? 'open' : 'closed'));
+
+  return { isOpen, toggle, variant };
+}
+
+type HamburgerProps = { toggle: () => void; variant: State<'open' | 'closed'> };
+
+function hamburger({ toggle, variant }: HamburgerProps) {
+  return html.button(
+    { class: styles.hamburger, onclick: toggle },
+    html.div({
+      class: () => classes(styles.upper, styles.upperVariants[variant.value]),
     }),
-    path({
-      'fill-rule': 'evenodd',
-      'clip-rule': 'evenodd',
-      d: 'M64.1067 46.5477C64.8642 46.2841 65.3422 45.6203 65.3125 44.872C65.2797 44.0208 65.2365 42.9119 65.2072 42.153C65.2 41.9544 65.0853 41.7661 64.9002 41.649C64.7158 41.5317 64.4849 41.5006 64.2805 41.5652C60.5 42.7692 45.3092 47.6179 30.3421 52.5553C17.0148 56.9521 14.3823 68.9296 19.1639 71.6845C19.4914 71.8744 19.7215 72.1774 19.7983 72.5167C19.8753 72.8566 19.7909 73.202 19.5665 73.4683C15.6011 78.153 13.9405 91.772 35.3015 84.5749L87.8481 66.8704L83.6715 62.923C83.6715 62.923 43.1246 76.7317 29.8612 81.2089C20.4883 84.3732 22.2073 75.208 31.1494 72.1951C41.2864 68.7797 60.0361 62.1649 60.0361 62.1649L57.8703 57.5679C57.8703 57.5679 27.6736 67.2547 26.2482 67.7308C21.5713 69.2912 22.8861 60.6644 33.141 57.2092C41.9259 54.2493 59.3052 48.2164 64.1067 46.5477Z',
-      fill: 'currentColor',
+    html.div({
+      class: () => classes(styles.lower, styles.lowerVariants[variant.value]),
     })
   );
 }
 
+function links() {
+  return [
+    ui.link({
+      to: '/',
+      children: ui.text({
+        type: 'tag',
+        variant: 'muted',
+        children: 'Home',
+      }),
+    }),
+    ui.link({
+      to: '/about',
+      children: ui.text({
+        type: 'tag',
+        variant: 'muted',
+        children: 'About',
+      }),
+    }),
+    ui.link({
+      to: '/',
+      children: ui.text({
+        type: 'tag',
+        variant: 'muted',
+        children: 'Contact',
+      }),
+    }),
+  ];
+}
+
+function navigation() {
+  return html.nav({ class: styles.nav.horiz }, ...links());
+}
+
+type SidebarProps = { variant: State<'open' | 'closed'> };
+
+function sidebar({ variant }: SidebarProps) {
+  return html.div(
+    { class: () => styles.sidebarVariants[variant.value] },
+    html.nav({ class: styles.nav.vert }, ...links())
+  );
+}
+
 export function header() {
+  const menu = createMenu();
+
   return html.header(
-    { class: styles.container },
-    html.div({ style: 'color: white;' }, logo({ size: 48 }))
+    html.div(
+      { class: styles.container },
+      logo({ size: 36 }),
+      navigation(),
+      hamburger(menu)
+    ),
+    html.div(sidebar(menu))
   );
 }

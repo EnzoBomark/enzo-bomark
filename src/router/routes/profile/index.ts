@@ -1,1 +1,0 @@
-export { profileRoute } from './profile';

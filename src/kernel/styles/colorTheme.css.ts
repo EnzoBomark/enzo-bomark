@@ -157,10 +157,10 @@ export const colorClass = createTheme(color, {
     },
     text: {
       default: {
-        color: color.semantic.neutral[900],
+        color: color.semantic.neutral[200],
       },
       muted: {
-        color: color.semantic.neutral[700],
+        color: color.semantic.neutral[400],
       },
     },
   },

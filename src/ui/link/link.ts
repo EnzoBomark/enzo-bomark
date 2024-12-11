@@ -1,13 +1,13 @@
 import { type Derived, type LinkParams, html, parsePath } from '@/dom';
-import { type Paths, navigate } from '~/router';
+import { navigate, paths } from '~/router';
 import { styles } from './link.css';
 
 type LinkProps = {
-  content: Derived<string> | Derived<HTMLElement>;
+  children: Derived<string> | Derived<Element>;
 };
 
-export function link<To extends Paths>(
-  props: LinkProps & LinkParams<Paths, To>
+export function link<To extends (typeof paths)[number]>(
+  props: LinkProps & LinkParams<(typeof paths)[number], To>
 ) {
   const onclick = (e: MouseEvent) => {
     e.preventDefault();
@@ -16,6 +16,6 @@ export function link<To extends Paths>(
 
   return html.a(
     { class: styles.container, href: parsePath(props), onclick },
-    props.content
+    props.children
   );
 }

@@ -1,9 +1,9 @@
 import { globalFontFace } from '@vanilla-extract/css';
 
-export const inter = 'Inter';
+export const NeueHaas = 'NeueHaas';
 
-globalFontFace(inter, {
-  src: ["url('/fonts/Inter-Regular.ttf')", "url('/fonts/Inter-Bold.ttf')"].join(
+globalFontFace(NeueHaas, {
+  src: ["url('/fonts/roman.ttf')", "url('/fonts/roman-italic.ttf')"].join(
     '\n,'
   ),
 });

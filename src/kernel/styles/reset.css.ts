@@ -23,6 +23,7 @@ time, mark, audio, video`,
     fontSize: '100%',
     font: 'inherit',
     verticalAlign: 'baseline',
+    fontFamily: 'NeueHaas, sans-serif',
   }
 );
 

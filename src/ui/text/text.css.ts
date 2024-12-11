@@ -1,9 +1,7 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 import { color } from '~/kernel/styles';
 
-const container = style({
-  fontFamily: 'Inter,ui-sans-serif,system-ui',
-});
+const container = style({});
 
 const variants = styleVariants({
   default: {

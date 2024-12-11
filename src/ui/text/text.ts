@@ -3,7 +3,7 @@ import { classes } from '~/kernel/styles';
 import { styles } from './text.css';
 
 type TextProps = {
-  content: Derived<string> | Derived<HTMLElement>;
+  children: Derived<string> | Derived<HTMLElement>;
   type?: keyof typeof styles.types;
   variant?: keyof typeof styles.variants;
   overflow?: keyof typeof styles.overflow;
@@ -11,7 +11,7 @@ type TextProps = {
 };
 
 export function text({
-  content,
+  children,
   type = 'body',
   variant = 'default',
   overflow = 'default',
@@ -27,23 +27,23 @@ export function text({
   };
 
   if (span) {
-    return html.span(props, content);
+    return html.span(props, children);
   }
 
   switch (type) {
     case 'heading':
-      return html.h1(props, content);
+      return html.h1(props, children);
     case 'subheading':
-      return html.h2(props, content);
+      return html.h2(props, children);
     case 'headline':
-      return html.h3(props, content);
+      return html.h3(props, children);
     case 'subheadline':
-      return html.h4(props, content);
+      return html.h4(props, children);
     case 'body':
-      return html.p(props, content);
+      return html.p(props, children);
     case 'caption':
-      return html.p(props, content);
+      return html.p(props, children);
     case 'tag':
-      return html.p(props, content);
+      return html.p(props, children);
   }
 }

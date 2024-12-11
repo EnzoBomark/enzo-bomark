@@ -4,6 +4,6 @@ import { ui } from '~/ui';
 
 export const homeRoute = createRoute('/')({
   component: () => {
-    return html.div(ui.text({ type: 'heading', content: 'Home' }));
+    return html.div(ui.text({ type: 'heading', children: 'Home' }));
   },
 });
