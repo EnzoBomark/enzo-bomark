@@ -1,4 +1,4 @@
-import { State, TagFunc, Tags } from './dom';
+import { State } from './dom';
 
 type UnArray<T> = T extends readonly (infer U)[] ? U : T;
 
@@ -67,4 +67,6 @@ declare function parsePath(props: {
   params?: Record<string, string>;
 }): string;
 
-export { router, createRoute, parsePath };
+declare const pathname: State<string>;
+
+export { createRoute, parsePath, pathname, router };

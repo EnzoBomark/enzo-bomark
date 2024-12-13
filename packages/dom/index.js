@@ -1,2 +1,2 @@
-export { html, append, state, derive } from './dom';
-export { router, createRoute, parsePath } from './router';
+export { append, derive, html, state } from './dom';
+export { createRoute, parsePath, pathname, router } from './router';

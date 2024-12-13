@@ -1,0 +1,1 @@
+export { foobarRoute } from './foobar';

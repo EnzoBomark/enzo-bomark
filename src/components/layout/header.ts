@@ -1,5 +1,5 @@
-import { derive, html, State, state } from '@/dom';
-import { classes } from '~/kernel/styles';
+import { derive, html, pathname, State, state } from '@/dom';
+import { paths } from '~/router';
 import { ui } from '~/ui';
 import { styles } from './header.css';
 import { logo } from './logo';
@@ -9,9 +9,11 @@ function createMenu() {
 
   const toggle = () => (isOpen.value = !isOpen.value);
 
+  const close = () => (isOpen.value = false);
+
   const variant = derive(() => (isOpen.value ? 'open' : 'closed'));
 
-  return { isOpen, toggle, variant };
+  return { isOpen, toggle, close, variant };
 }
 
 type HamburgerProps = { toggle: () => void; variant: State<'open' | 'closed'> };
@@ -19,66 +21,81 @@ type HamburgerProps = { toggle: () => void; variant: State<'open' | 'closed'> };
 function hamburger({ toggle, variant }: HamburgerProps) {
   return html.button(
     { class: styles.hamburger, onclick: toggle },
-    html.div({
-      class: () => classes(styles.upper, styles.upperVariants[variant.value]),
-    }),
-    html.div({
-      class: () => classes(styles.lower, styles.lowerVariants[variant.value]),
-    })
+    html.div({ class: () => styles.upper[variant.value] }),
+    html.div({ class: () => styles.lower[variant.value] })
   );
 }
 
-function links() {
+type NavlinkProps = {
+  path: (typeof paths)[number];
+  label: string;
+  onclick: () => void;
+};
+
+function navlink({ path, label, onclick }: NavlinkProps) {
+  return ui.link({
+    to: path,
+    children: html.p(
+      {
+        onclick,
+        class: () =>
+          pathname.value.split('?')[0] === path
+            ? styles.link.active
+            : styles.link.inactive,
+      },
+      label
+    ),
+  });
+}
+
+type LinkProps = { onclick: () => void };
+
+function links({ onclick }: LinkProps) {
   return [
-    ui.link({
-      to: '/',
-      children: ui.text({
-        type: 'tag',
-        variant: 'muted',
-        children: 'Home',
-      }),
-    }),
-    ui.link({
-      to: '/about',
-      children: ui.text({
-        type: 'tag',
-        variant: 'muted',
-        children: 'About',
-      }),
-    }),
-    ui.link({
-      to: '/',
-      children: ui.text({
-        type: 'tag',
-        variant: 'muted',
-        children: 'Contact',
-      }),
-    }),
+    navlink({ path: '/', label: 'Home', onclick }),
+    navlink({ path: '/about', label: 'About', onclick }),
+    navlink({ path: '/contact', label: 'Contact', onclick }),
   ];
 }
 
-function navigation() {
-  return html.nav({ class: styles.nav.horiz }, ...links());
+type NavigationProps = { close: () => void };
+
+function navigation({ close }: NavigationProps) {
+  return html.nav({ class: styles.nav.horiz }, links({ onclick: close }));
 }
 
-type SidebarProps = { variant: State<'open' | 'closed'> };
+type SidebarProps = {
+  close: () => void;
+  variant: State<'open' | 'closed'>;
+};
 
-function sidebar({ variant }: SidebarProps) {
+function sidebar({ close, variant }: SidebarProps) {
   return html.div(
-    { class: () => styles.sidebarVariants[variant.value] },
-    html.nav({ class: styles.nav.vert }, ...links())
+    { class: () => styles.sidebar[variant.value] },
+    html.nav({ class: styles.nav.vert }, links({ onclick: close }))
   );
+}
+
+function logoLink() {
+  return ui.link({
+    to: '/',
+    children: html.span({ class: styles.logo }, logo({ size: 38 })),
+  });
 }
 
 export function header() {
   const menu = createMenu();
 
   return html.header(
+    { class: styles.container },
     html.div(
-      { class: styles.container },
-      logo({ size: 36 }),
-      navigation(),
-      hamburger(menu)
+      html.div({ class: styles.background }),
+      html.div(
+        { class: styles.inner },
+        logoLink(),
+        navigation(menu),
+        hamburger(menu)
+      )
     ),
     html.div(sidebar(menu))
   );

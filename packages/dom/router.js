@@ -2,6 +2,7 @@ import { state } from './dom';
 
 const loadedRoutes = [];
 const activeRoute = state(null);
+export const pathname = state(window.location.pathname);
 
 export function parsePath(options) {
   const path = options.params
@@ -61,6 +62,8 @@ function forward() {
 }
 
 function updateActiveRoute() {
+  pathname.value = window.location.pathname;
+
   const match = loadedRoutes.find(isRouteMatch);
 
   if (match) {

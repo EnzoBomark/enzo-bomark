@@ -3,10 +3,18 @@ import { append, html, router } from '@/dom';
 import { layout } from './components/layout';
 import { theme } from './kernel/styles';
 import { aboutRoute } from './screens/about';
+import { contactRoute } from './screens/contact';
+import { foobarRoute } from './screens/foobar';
 import { homeRoute } from './screens/home';
 import { wildcardRoute } from './screens/wildcard';
 
-export const routes = [homeRoute, aboutRoute, wildcardRoute];
+export const routes = [
+  homeRoute,
+  aboutRoute,
+  contactRoute,
+  foobarRoute,
+  wildcardRoute,
+];
 
 export const paths = routes.map(({ path }) => path);
 

@@ -144,7 +144,7 @@ export const colorClass = createTheme(color, {
   },
   component: {
     card: {
-      backgroundColor: color.semantic.neutral[0],
+      backgroundColor: color.semantic.neutral[900],
       color: color.semantic.neutral[900],
       borderColor: color.semantic.neutral[200],
     },

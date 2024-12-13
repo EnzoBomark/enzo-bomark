@@ -5,6 +5,7 @@ const { svg, path } = html('http://www.w3.org/2000/svg');
 export function logo({ size = 24 }) {
   return svg(
     {
+      style: 'padding-left: 0.5rem; padding-right: 0.5rem;',
       width: size,
       height: size,
       viewBox: '230.026 338.223 1459.95 691.555',
