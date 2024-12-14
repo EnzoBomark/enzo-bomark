@@ -36,8 +36,8 @@ const rotate = keyframes({
   '100%': { transform: 'rotate(360deg)' },
 });
 
-const cubicBezier = {
-  easeInOut: 'cubic-bezier(0.1, 0.82, 0.76, 0.965)',
+const easing = {
+  snappy: 'cubic-bezier(0.1, 0.82, 0.76, 0.965)',
 };
 
 export const animation = {
@@ -45,5 +45,5 @@ export const animation = {
   fadeInLeft,
   fadeInRight,
   rotate,
-  cubicBezier,
+  easing,
 };

@@ -8,4 +8,9 @@ const container = style({
   flexDirection: 'column',
 });
 
-export const styles = { container };
+const main = style({
+  display: 'flex',
+  flexGrow: 1,
+});
+
+export const styles = { container, main };

@@ -1,9 +1,9 @@
-import { type Derived, type LinkParams, html, parsePath } from '@/dom';
+import { ChildDom, LinkParams, html, parsePath } from '@/dom';
 import { navigate, paths } from '~/router';
 import { styles } from './link.css';
 
 type LinkProps = {
-  children: Derived<string> | Derived<Element>;
+  children: ChildDom;
 };
 
 export function link<To extends (typeof paths)[number]>(

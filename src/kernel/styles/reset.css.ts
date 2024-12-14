@@ -39,6 +39,11 @@ globalStyle('body', {
   lineHeight: 1,
 });
 
+globalStyle('main', {
+  maxWidth: '100vw',
+  overflowX: 'hidden',
+});
+
 globalStyle('ol, ul', {
   listStyle: 'none',
 });

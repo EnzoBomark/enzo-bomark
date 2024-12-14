@@ -1,18 +1,17 @@
-import { Derived, html } from '@/dom';
+import { ChildDom, html } from '@/dom';
 import { footer } from './footer';
 import { header } from './header';
 import { styles } from './layout.css';
-import { main } from './main';
 
 type LayoutProps = {
-  children: Derived<Element>;
+  children: ChildDom;
 };
 
 export function layout({ children }: LayoutProps) {
   return html.div(
     { class: styles.container },
     header(),
-    main({ children }),
+    html.main({ class: styles.main }, children),
     footer()
   );
 }
