@@ -1,4 +1,5 @@
 import { html, State } from '@/dom';
+import { classes } from '~/kernel/styles';
 import { links } from './links';
 import { styles } from './sidebar.css';
 
@@ -9,8 +10,9 @@ type SidebarProps = {
 
 export function sidebar({ close, variant }: SidebarProps) {
   return html.div(
+    { class: styles.container },
     html.div(
-      { class: () => styles.sidebar[variant.value] },
+      { class: () => classes(styles.sidebar[variant.value]) },
       html.nav({ class: styles.nav }, links({ onclick: close }))
     )
   );

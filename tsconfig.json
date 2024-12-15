@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "packages/**/*"],
   "exclude": ["src/**/*/__test__"],
   "compilerOptions": {
     "target": "ES2020",

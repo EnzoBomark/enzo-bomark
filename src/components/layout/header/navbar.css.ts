@@ -1,15 +1,8 @@
 import { style } from '@vanilla-extract/css';
 import { breakpointMediaQuery, color, variables } from '~/kernel/styles';
 
-const background = style({
-  position: 'absolute',
-  width: '100%',
-  height: '2.5rem',
-  backgroundColor: color.semantic.neutral[900],
-  opacity: 0.9,
-});
-
 const container = style({
+  zIndex: 99999,
   height: '2.5rem',
   width: '100%',
   display: 'flex',
@@ -18,6 +11,14 @@ const container = style({
   borderBottom: `1px solid ${color.semantic.neutral[800]}`,
   WebkitBackdropFilter: 'blur(18px)',
   backdropFilter: 'blur(18px)',
+});
+
+const background = style({
+  position: 'absolute',
+  width: '100%',
+  height: '2.5rem',
+  backgroundColor: color.semantic.neutral[950],
+  opacity: 0.9,
 });
 
 const inner = style({
@@ -34,12 +35,13 @@ const inner = style({
 const nav = style({
   textDecoration: 'none',
   gap: '2rem',
-  display: 'flex',
-  visibility: 'hidden',
+  display: 'none',
+  fontSize: variables.typography.tag.fontSize,
+  lineHeight: variables.typography.tag.lineHeight,
 
   '@media': {
     [breakpointMediaQuery.sm]: {
-      visibility: 'visible',
+      display: 'flex',
     },
   },
 });

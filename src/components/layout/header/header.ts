@@ -6,5 +6,5 @@ import { sidebar } from './sidebar';
 
 export function header() {
   const menu = createMenu();
-  return html.header({ class: styles.container }, navbar(menu), sidebar(menu));
+  return html.header({ class: styles.container }, sidebar(menu), navbar(menu));
 }

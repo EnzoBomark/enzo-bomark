@@ -1,5 +1,5 @@
 type InlineProps = {
-  [key: string]: string | number | undefined;
+  [key: string]: string | undefined;
 };
 
 export function inline(props: InlineProps) {

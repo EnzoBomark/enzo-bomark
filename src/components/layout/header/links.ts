@@ -7,5 +7,6 @@ export function links({ onclick }: LinkProps) {
     navlink({ path: '/', label: 'Home', onclick }),
     navlink({ path: '/about', label: 'About', onclick }),
     navlink({ path: '/contact', label: 'Contact', onclick }),
+    navlink({ path: '/contact', label: 'Packages', onclick }),
   ];
 }

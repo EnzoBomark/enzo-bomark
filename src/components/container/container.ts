@@ -8,11 +8,6 @@ type ContainerProps = {
 export function container({ children }: ContainerProps) {
   return html.div(
     { class: styles.container },
-    html.div(
-      { class: styles.inner },
-      html.div({ class: styles.bar.left }),
-      children,
-      html.div({ class: styles.bar.right })
-    )
+    html.div({ class: styles.inner }, children)
   );
 }
