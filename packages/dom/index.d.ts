@@ -4,6 +4,7 @@ export {
   State,
   Tags,
   append,
+  appendHtmlString,
   derive,
   html,
   state,

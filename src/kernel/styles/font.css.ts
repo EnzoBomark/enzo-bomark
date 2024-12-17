@@ -1,9 +1,12 @@
 import { globalFontFace } from '@vanilla-extract/css';
 
-export const NeueHaas = 'NeueHaas';
+export const Hyperlegible = 'Hyperlegible';
 
-globalFontFace(NeueHaas, {
-  src: ["url('/fonts/roman.ttf')", "url('/fonts/roman-italic.ttf')"].join(
-    '\n,'
-  ),
+globalFontFace(Hyperlegible, {
+  src: [
+    "url('/fonts/hyperlegible-regular.ttf')",
+    "url('/fonts/hyperlegible-regular-italic.ttf')",
+    "url('/fonts/hyperlegible-bold.ttf')",
+    "url('/fonts/hyperlegible-bold-italic.ttf')",
+  ].join('\n,'),
 });

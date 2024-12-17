@@ -35,6 +35,10 @@ footer, header, hgroup, menu, nav, section`,
   }
 );
 
+globalStyle('html', {
+  background: '#09090b',
+});
+
 globalStyle('body', {
   lineHeight: 1,
 });

@@ -21,6 +21,13 @@ const overflow = styleVariants({
   },
 });
 
+const legibility = styleVariants({
+  default: {},
+  legible: {
+    wordSpacing: '0.1em',
+  },
+});
+
 const types = styleVariants({
   heading: {
     fontSize: '1.75rem',
@@ -52,4 +59,4 @@ const types = styleVariants({
   },
 });
 
-export const styles = { container, variants, types, overflow };
+export const styles = { container, variants, types, overflow, legibility };

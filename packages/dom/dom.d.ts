@@ -63,4 +63,6 @@ declare function append(
   ...children: readonly ChildDom[]
 ): Element;
 
-export { append, derive, html, state };
+declare function appendHtmlString(node: Element, string: string): Element;
+
+export { append, appendHtmlString, derive, html, state };

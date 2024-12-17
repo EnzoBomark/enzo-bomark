@@ -1,108 +1,108 @@
-pre code.hljs {
+pre code.highlight {
   display: block;
   overflow-x: auto;
   padding: 1em;
 }
-code.hljs {
+code.highlight {
   padding: 3px 5px;
 }
-.hljs {
+.highlight {
   color: #c9d1d9;
   background: #0d1117;
 }
-.hljs-doctag,
-.hljs-keyword,
-.hljs-meta .hljs-keyword,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type,
-.hljs-variable.language_ {
+.highlight-doctag,
+.highlight-keyword,
+.highlight-meta .highlight-keyword,
+.highlight-template-tag,
+.highlight-template-variable,
+.highlight-type,
+.highlight-variable.language_ {
   /* prettylights-syntax-keyword */
   color: #ff7b72;
 }
-.hljs-title,
-.hljs-title.class_,
-.hljs-title.class_.inherited__,
-.hljs-title.function_ {
+.highlight-title,
+.highlight-title.class_,
+.highlight-title.class_.inherited__,
+.highlight-title.function_ {
   /* prettylights-syntax-entity */
   color: #d2a8ff;
 }
-.hljs-attr,
-.hljs-attribute,
-.hljs-literal,
-.hljs-meta,
-.hljs-number,
-.hljs-operator,
-.hljs-variable,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-selector-id {
+.highlight-attr,
+.highlight-attribute,
+.highlight-literal,
+.highlight-meta,
+.highlight-number,
+.highlight-operator,
+.highlight-variable,
+.highlight-selector-attr,
+.highlight-selector-class,
+.highlight-selector-id {
   /* prettylights-syntax-constant */
   color: #79c0ff;
 }
-.hljs-regexp,
-.hljs-string,
-.hljs-meta .hljs-string {
+.highlight-regexp,
+.highlight-string,
+.highlight-meta .highlight-string {
   /* prettylights-syntax-string */
   color: #a5d6ff;
 }
-.hljs-built_in,
-.hljs-symbol {
+.highlight-built_in,
+.highlight-symbol {
   /* prettylights-syntax-variable */
   color: #ffa657;
 }
-.hljs-comment,
-.hljs-code,
-.hljs-formula {
+.highlight-comment,
+.highlight-code,
+.highlight-formula {
   /* prettylights-syntax-comment */
   color: #8b949e;
 }
-.hljs-name,
-.hljs-quote,
-.hljs-selector-tag,
-.hljs-selector-pseudo {
+.highlight-name,
+.highlight-quote,
+.highlight-selector-tag,
+.highlight-selector-pseudo {
   /* prettylights-syntax-entity-tag */
   color: #7ee787;
 }
-.hljs-subst {
+.highlight-subst {
   /* prettylights-syntax-storage-modifier-import */
   color: #c9d1d9;
 }
-.hljs-section {
+.highlight-section {
   /* prettylights-syntax-markup-heading */
   color: #1f6feb;
   font-weight: bold;
 }
-.hljs-bullet {
+.highlight-bullet {
   /* prettylights-syntax-markup-list */
   color: #f2cc60;
 }
-.hljs-emphasis {
+.highlight-emphasis {
   /* prettylights-syntax-markup-italic */
   color: #c9d1d9;
   font-style: italic;
 }
-.hljs-strong {
+.highlight-strong {
   /* prettylights-syntax-markup-bold */
   color: #c9d1d9;
   font-weight: bold;
 }
-.hljs-addition {
+.highlight-addition {
   /* prettylights-syntax-markup-inserted */
   color: #aff5b4;
   background-color: #033a16;
 }
-.hljs-deletion {
+.highlight-deletion {
   /* prettylights-syntax-markup-deleted */
   color: #ffdcd7;
   background-color: #67060c;
 }
 
 /* purposely ignored */
-/* .hljs-char.escape_,
-.hljs-link,
-.hljs-params,
-.hljs-property,
-.hljs-punctuation,
-.hljs-tag {
+/* .highlight-char.escape_,
+.highlight-link,
+.highlight-params,
+.highlight-property,
+.highlight-punctuation,
+.highlight-tag {
 } */

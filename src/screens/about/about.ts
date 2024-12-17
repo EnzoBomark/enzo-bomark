@@ -1,57 +1,63 @@
-import { derive, html, state } from '@/dom';
+import { html } from '@/dom';
+import { container } from '~/components/container';
 import { createRoute } from '~/router';
 import { ui } from '~/ui';
+import { styles } from './about.css';
 
-function createCounter(initial_value = 0, step = 1) {
-  const count = state(initial_value);
-  const canIncrement = derive(() => count.value < 10);
-  const canDecrement = derive(() => count.value > 0);
+// function createCounter(initial_value = 0, step = 1) {
+//   const count = state(initial_value);
+//   const canIncrement = derive(() => count.value < 10);
+//   const canDecrement = derive(() => count.value > 0);
 
-  const increment = () => canIncrement.value && (count.value += step);
+//   const increment = () => canIncrement.value && (count.value += step);
 
-  const decrement = () => canDecrement.value && (count.value -= step);
+//   const decrement = () => canDecrement.value && (count.value -= step);
 
-  const reset = () => (count.value = initial_value);
+//   const reset = () => (count.value = initial_value);
 
-  return {
-    count,
-    canIncrement,
-    canDecrement,
-    increment,
-    decrement,
-    reset,
-  };
-}
+//   return {
+//     count,
+//     canIncrement,
+//     canDecrement,
+//     increment,
+//     decrement,
+//     reset,
+//   };
+// }
 
 export const aboutRoute = createRoute('/about')({
   component: () => {
-    const counter = createCounter(10);
+    // const counter = createCounter(10);
 
-    return html.div(
-      ui.text({ type: 'heading', children: `About` }),
-      ui.card({
-        title: html.div(
-          ui.text({ type: 'heading', children: 'Card 1' }),
-          ui.text({ children: () => `Count: ${counter.count.value}` })
-        ),
-        content: html.div(
-          ui.button({
-            disabled: () => !counter.canIncrement.value,
-            onclick: counter.increment,
-            label: 'Increment',
-          }),
-          ui.button({
-            disabled: () => !counter.canDecrement.value,
-            onclick: counter.decrement,
-            label: 'Decrement',
-          }),
-          ui.button({ onclick: counter.reset, label: 'Reset' })
-        ),
-      }),
-      ui.link({
-        to: '/about',
-        children: 'foobar',
-      })
-    );
+    return container({
+      variant: 'sm',
+      children: html.div(
+        { class: styles.header },
+        ui.fadeInOnScroll({
+          direction: 'static',
+          children: ui.text({ type: 'heading', children: `About` }),
+        })
+      ),
+    });
+
+    // ui.card({
+    //   title: html.div(
+    //     ui.text({ type: 'heading', children: 'Card 1' }),
+    //     ui.text({ children: () => `Count: ${counter.count.value}` })
+    //   ),
+    //   content: html.div(
+    //     ui.button({
+    //       disabled: () => !counter.canIncrement.value,
+    //       onclick: counter.increment,
+    //       label: 'Increment',
+    //     }),
+    //     ui.button({
+    //       disabled: () => !counter.canDecrement.value,
+    //       onclick: counter.decrement,
+    //       label: 'Decrement',
+    //     }),
+    //     ui.button({ onclick: counter.reset, label: 'Reset' })
+    //   ),
+    // })
   },
 });

@@ -1,1 +1,0 @@
-export { contactRoute } from './contact';

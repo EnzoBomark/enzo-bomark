@@ -3,15 +3,15 @@ import { append, html, router } from '@/dom';
 import { layout } from './components/layout';
 import { theme } from './kernel/styles';
 import { aboutRoute } from './screens/about';
-import { contactRoute } from './screens/contact';
 import { dontAvoidErrorsRoute } from './screens/dont-avoid-errors';
 import { homeRoute } from './screens/home';
+import { packagesRoute } from './screens/packages';
 import { wildcardRoute } from './screens/wildcard';
 
 export const routes = [
   homeRoute,
   aboutRoute,
-  contactRoute,
+  packagesRoute,
   dontAvoidErrorsRoute,
   wildcardRoute,
 ];

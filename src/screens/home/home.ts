@@ -11,7 +11,19 @@ export const homeRoute = createRoute('/')({
           index: 1,
           to: '/dont-avoid-errors',
           label: `Don't avoid errors`,
-          date: '2025 . 03 . 15',
+          date: '2025/03/15',
+        }),
+        row({
+          index: 2,
+          to: '/dont-avoid-errors',
+          label: `Don't avoid errors`,
+          date: '2025/03/15',
+        }),
+        row({
+          index: 3,
+          to: '/dont-avoid-errors',
+          label: `Don't avoid errors`,
+          date: '2025/03/15',
         })
       ),
     }),

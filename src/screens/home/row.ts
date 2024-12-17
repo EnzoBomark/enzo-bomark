@@ -35,7 +35,7 @@ export function row<To extends (typeof paths)[number]>(
               class: styles.date,
             },
             ui.text({
-              type: 'caption',
+              type: 'body',
               variant: 'muted',
               children: props.date,
             })

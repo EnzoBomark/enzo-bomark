@@ -24,13 +24,13 @@ const label = style({
   display: 'flex',
   alignItems: 'center',
   gap: '0.5rem',
-  animation: `${animation.fadeInUp} 2s ${animation.easing.wave}`,
+  animation: `${animation.fadeInUp} 1.5s ${animation.easing.wave}`,
   animationFillMode: 'backwards',
   WebkitAnimationFillMode: 'backwards',
 });
 
 const date = style({
-  animation: `${animation.fadeInRight} 2s ${animation.easing.wave}`,
+  animation: `${animation.fadeInRight} 1.5s ${animation.easing.wave}`,
   animationFillMode: 'backwards',
   WebkitAnimationFillMode: 'backwards',
 });
@@ -43,7 +43,7 @@ const devider = style({
   transform: 'translateY(-1px)',
   backgroundColor: color.semantic.neutral[800],
 
-  animation: `${animation.fadeIn} 2s ${animation.easing.wave}`,
+  animation: `${animation.fadeIn} 1.5s ${animation.easing.wave}`,
   animationFillMode: 'backwards',
   WebkitAnimationFillMode: 'backwards',
 });

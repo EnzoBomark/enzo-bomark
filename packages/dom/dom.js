@@ -269,4 +269,9 @@ const html = new Proxy(
   factory()
 );
 
-export { append, derive, html, state };
+function appendHtmlString(node, string) {
+  node.innerHTML = string;
+  return node;
+}
+
+export { append, appendHtmlString, derive, html, state };
