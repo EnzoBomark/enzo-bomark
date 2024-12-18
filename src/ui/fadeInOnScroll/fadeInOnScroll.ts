@@ -1,10 +1,12 @@
 import { html } from '@/dom';
+import { classes } from '~/kernel/styles';
 import { styles } from './fadeInOnScroll.css';
 
 type FadeInOnScrollProps = {
   children: Element;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'static';
-  delay?: 'none' | 'short' | 'medium' | 'long';
+  direction?: keyof typeof styles.direction;
+  delay?: keyof typeof styles.delay;
+  overflow?: keyof typeof styles.overflow;
   freezeOnceVisible?: boolean;
   threshold?: number;
   rootMargin?: string;
@@ -15,6 +17,7 @@ export function fadeInOnScroll({
   children,
   direction = 'up',
   delay = 'none',
+  overflow = 'hidden',
   freezeOnceVisible = true,
   threshold,
   rootMargin,
@@ -50,5 +53,8 @@ export function fadeInOnScroll({
 
   observer.observe(children);
 
-  return html.div({ class: styles.container }, children);
+  return html.div(
+    { class: classes(styles.container, styles.overflow[overflow]) },
+    children
+  );
 }

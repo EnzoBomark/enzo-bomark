@@ -34,6 +34,8 @@ export function text({
   }
 
   switch (type) {
+    case 'hero':
+      return html.h1(props, children);
     case 'heading':
       return html.h1(props, children);
     case 'subheading':

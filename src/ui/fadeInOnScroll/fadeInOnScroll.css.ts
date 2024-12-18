@@ -3,7 +3,15 @@ import { animation } from '~/kernel/styles';
 
 const container = style({
   position: 'relative',
-  overflow: 'hidden',
+});
+
+const overflow = styleVariants({
+  hidden: {
+    overflow: 'hidden',
+  },
+  visible: {
+    overflow: 'visible',
+  },
 });
 
 const fadeInUp = keyframes({
@@ -190,4 +198,4 @@ const delay = styleVariants({
   },
 });
 
-export const styles = { container, direction, delay };
+export const styles = { container, overflow, direction, delay };
