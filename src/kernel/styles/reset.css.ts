@@ -1,6 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css';
-
-// https://meyerweb.com/eric/tools/css/reset/
+import { hyperlegible } from './font.css';
 
 globalStyle(
   `html, body, div, span, applet, object, iframe,
@@ -23,7 +22,7 @@ time, mark, audio, video`,
     fontSize: '100%',
     font: 'inherit',
     verticalAlign: 'baseline',
-    fontFamily: 'NeueHaas, sans-serif',
+    fontFamily: hyperlegible,
   }
 );
 

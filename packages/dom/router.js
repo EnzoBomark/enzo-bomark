@@ -44,6 +44,10 @@ router.navigate = function () {
 };
 
 function go(options) {
+  if (parsePath(options) === window.location.pathname) {
+    return;
+  }
+
   if (options.replace) {
     window.history.replaceState({}, '', parsePath(options));
   } else {

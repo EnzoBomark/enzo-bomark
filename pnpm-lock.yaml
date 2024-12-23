@@ -11,6 +11,9 @@ dependencies:
   '@vanilla-extract/vite-plugin':
     specifier: ^4.0.16
     version: 4.0.16(@types/node@22.5.5)(vite@5.4.8)
+  canvas-confetti:
+    specifier: ^1.9.3
+    version: 1.9.3
 
 devDependencies:
   '@swc/cli':
@@ -22,6 +25,9 @@ devDependencies:
   '@swc/jest':
     specifier: ^0.2.36
     version: 0.2.36(@swc/core@1.7.26)
+  '@types/canvas-confetti':
+    specifier: ^1.9.0
+    version: 1.9.0
   '@types/jest':
     specifier: ^29.5.13
     version: 29.5.13
@@ -1482,6 +1488,10 @@ packages:
       '@types/responselike': 1.0.3
     dev: true
 
+  /@types/canvas-confetti@1.9.0:
+    resolution: {integrity: sha512-aBGj/dULrimR1XDZLtG9JwxX1b4HPRF6CX9Yfwh3NvstZEm1ZL7RBnel4keCPSqs1ANRu1u2Aoz9R+VmtjYuTg==}
+    dev: true
+
   /@types/estree@1.0.6:
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
@@ -2023,6 +2033,10 @@ packages:
 
   /caniuse-lite@1.0.30001662:
     resolution: {integrity: sha512-sgMUVwLmGseH8ZIrm1d51UbrhqMCH3jvS7gF/M6byuHOnKyLOBL7W8yz5V02OHwgLGA36o/AFhWzzh4uc5aqTA==}
+
+  /canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
+    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}

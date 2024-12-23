@@ -39,7 +39,8 @@ const devider = style({
   position: 'absolute',
   width: '100vw',
   left: '0',
-  height: '1px',
+  maxHeight: '1px',
+  minHeight: '1px',
   transform: 'translateY(-1px)',
   backgroundColor: color.semantic.neutral[800],
 
@@ -49,6 +50,7 @@ const devider = style({
 });
 
 const icon = style({
+  display: 'flex',
   transition: `transform 0.3s ${animation.easing.snappy}`,
 
   selectors: {

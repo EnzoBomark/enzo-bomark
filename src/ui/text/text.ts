@@ -8,6 +8,7 @@ type TextProps = {
   variant?: keyof typeof styles.variants;
   overflow?: keyof typeof styles.overflow;
   legibility?: keyof typeof styles.legibility;
+  shadow?: keyof typeof styles.shadow;
   span?: boolean;
 };
 
@@ -17,6 +18,7 @@ export function text({
   variant = 'default',
   overflow = 'default',
   legibility = 'default',
+  shadow = 'default',
   span = false,
 }: TextProps) {
   const props = {
@@ -25,7 +27,8 @@ export function text({
       styles.types[type],
       styles.variants[variant],
       styles.overflow[overflow],
-      styles.legibility[legibility]
+      styles.legibility[legibility],
+      styles.shadow[shadow]
     ),
   };
 

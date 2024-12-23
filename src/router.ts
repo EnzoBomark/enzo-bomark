@@ -5,13 +5,13 @@ import { theme } from './kernel/styles';
 import { aboutRoute } from './screens/about';
 import { dontAvoidErrorsRoute } from './screens/dont-avoid-errors';
 import { homeRoute } from './screens/home';
-import { packagesRoute } from './screens/packages';
+import { pickleRoute } from './screens/pickle';
 import { wildcardRoute } from './screens/wildcard';
 
 export const routes = [
   homeRoute,
   aboutRoute,
-  packagesRoute,
+  pickleRoute,
   dontAvoidErrorsRoute,
   wildcardRoute,
 ];

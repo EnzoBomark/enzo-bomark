@@ -50,14 +50,14 @@ const bar = styleVariants({
     {
       left: 0,
       borderLeftWidth: 1,
-      borderLeftStyle: 'dashed',
+      borderLeftStyle: 'solid',
       borderLeftColor: 'transparent',
       animation: `${animation.fadeInDown} 2s ${animation.easing.snappy} forwards`,
       transition: 'border-left-color 0.2s',
 
       '@media': {
         [breakpointMediaQuery.lg]: {
-          borderLeftColor: color.semantic.neutral[800],
+          borderLeftColor: color.semantic.neutral[900],
         },
       },
 
@@ -77,14 +77,14 @@ const bar = styleVariants({
     {
       right: 0,
       borderRightWidth: 1,
-      borderRightStyle: 'dashed',
+      borderRightStyle: 'solid',
       borderRightColor: 'transparent',
       animation: `${animation.fadeInDown} 2s ${animation.easing.snappy} forwards`,
       transition: 'border-right-color 0.2s',
 
       '@media': {
         [breakpointMediaQuery.lg]: {
-          borderRightColor: color.semantic.neutral[800],
+          borderRightColor: color.semantic.neutral[900],
         },
       },
 

@@ -2,6 +2,8 @@ import { style, styleVariants } from '@vanilla-extract/css';
 import { color } from '~/kernel/styles';
 
 const container = style({
+  lineHeight: '1.125',
+  wordSpacing: '0.075em',
   border: `1px solid ${color.semantic.neutral[800]}`,
   backgroundColor: color.semantic.neutral[925],
   borderRadius: '0.125rem',

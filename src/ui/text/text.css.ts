@@ -12,6 +12,13 @@ const variants = styleVariants({
   },
 });
 
+const shadow = styleVariants({
+  default: {},
+  small: {
+    textShadow: `0 0 10px ${color.semantic.neutral[950]}`,
+  },
+});
+
 const overflow = styleVariants({
   default: {},
   ellipsis: {
@@ -32,7 +39,7 @@ const types = styleVariants({
   hero: {
     fontSize: '3rem',
     lineHeight: '3.75rem',
-    fontWeight: 700,
+    fontWeight: '700',
   },
   heading: {
     fontSize: '1.75rem',
@@ -64,4 +71,11 @@ const types = styleVariants({
   },
 });
 
-export const styles = { container, variants, types, overflow, legibility };
+export const styles = {
+  container,
+  variants,
+  shadow,
+  types,
+  overflow,
+  legibility,
+};
