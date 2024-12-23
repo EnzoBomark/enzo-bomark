@@ -2,7 +2,7 @@ import { style, styleVariants } from '@vanilla-extract/css';
 import { animation, color, variables } from '~/kernel/styles';
 
 const canvas = style({
-  position: 'absolute',
+  position: 'fixed',
   top: 0,
   left: 0,
   right: 0,
@@ -28,6 +28,8 @@ const popupBase = style({
   borderBottom: `1px solid ${color.semantic.neutral[800]}`,
   padding: '0.75rem',
   width: 'calc(100vw - 1.5rem)',
+  fontSize: variables.typography.caption.fontSize,
+  lineHeight: variables.typography.caption.lineHeight,
 });
 
 const popup = styleVariants({
@@ -305,6 +307,7 @@ const horizontal = styleVariants({
 const header = style({
   marginTop: '8rem',
   marginBottom: '3rem',
+  padding: '0 2rem',
 });
 
 const title = style({
@@ -318,6 +321,7 @@ const subtitle = style({
 const cta = style({
   padding: '1rem',
   display: 'flex',
+  flexWrap: 'wrap',
   justifyContent: 'center',
   alignItems: 'center',
   gap: '1rem',
@@ -380,7 +384,9 @@ const preview = style({
 });
 
 const code = style({
-  width: variables.breakpoint.sm,
+  overflow: 'auto',
+  maxWidth: variables.breakpoint.sm,
+  width: 'calc(100vw - 2rem)',
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
