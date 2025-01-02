@@ -46,7 +46,9 @@ function fire(event: MouseEvent) {
   }, 6000);
 }
 
-export const confettiCannon = {
-  fire,
-  parentId: ID_KEY,
-};
+export function createConfettiCannon() {
+  return {
+    fire,
+    parentId: ID_KEY,
+  };
+}

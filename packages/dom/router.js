@@ -55,6 +55,7 @@ function go(options) {
   }
 
   updateActiveRoute();
+  window.scrollTo(0, 0);
 }
 
 function back() {

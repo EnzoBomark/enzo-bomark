@@ -6,6 +6,7 @@ const container = style({
   display: 'flex',
   justifyContent: 'center',
   width: '100%',
+  overflow: 'hidden',
 });
 
 const inner = styleVariants({

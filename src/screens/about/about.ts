@@ -35,12 +35,22 @@ export const aboutRoute = createRoute('/about')({
             direction: 'static',
             children: ui.text({
               type: 'subheadline',
-              children: `As a software engineer, I’m committed to creating polished software and designing engaging user experiences. This is my personal notebook, where I’ll somewhat seriously attempt to jot down the lessons I’ve learned.
+              children: `I started developing video games using C# in 2015. Since 2020, my focus has shifted primarily to creating business software and mobile applications mostly using TypeScript but not limited to it.
             `,
             }),
           })
         ),
-
+        html.div(
+          { class: styles.content },
+          ui.fadeInOnScroll({
+            direction: 'static',
+            children: ui.text({
+              type: 'subheadline',
+              children: `This is my personal notebook, where I’ll somewhat seriously attempt to jot down the lessons I’ve learned.
+            `,
+            }),
+          })
+        ),
         html.div(
           { class: styles.picture },
           ui.fadeInOnScroll({
@@ -49,7 +59,7 @@ export const aboutRoute = createRoute('/about')({
               { class: styles.image },
               html.img({
                 class: styles.img,
-                src: '/images/me.jpg',
+                src: '/images/me.png',
                 alt: 'Enzo Bomark',
               })
             ),
