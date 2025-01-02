@@ -18,8 +18,7 @@ export const dontAvoidErrorsRoute = createRoute('/dont-avoid-errors')({
           }),
         },
         ui.fadeInOnScroll({
-          direction: 'left',
-          overflow: 'visible',
+          direction: 'static',
           children: html.h1(
             {
               style: inline({

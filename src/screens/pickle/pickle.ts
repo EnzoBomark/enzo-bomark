@@ -91,7 +91,7 @@ export const pickleRoute = createRoute('/pickle')({
               { class: styles.cta },
               html.button(
                 { class: styles.download, onclick: copyToClipboard },
-                html.p('$ npm i @bmrk/pickle'),
+                html.p({ class: styles.label }, '$ npm i @bmrk/pickle'),
                 icon.copy({ size: 18 })
               ),
 
@@ -102,11 +102,10 @@ export const pickleRoute = createRoute('/pickle')({
                   target: '_blank',
                 },
                 icon.github({ size: 18 }),
-                html.p('View on GitHub')
+                html.p({ class: styles.label }, 'View on GitHub')
               )
             ),
           }),
-
           html.div(
             { class: styles.preview },
             ui.fadeInOnScroll({
@@ -114,6 +113,18 @@ export const pickleRoute = createRoute('/pickle')({
               delay: 'medium',
               children: html.div(
                 { class: styles.code },
+                html.div(
+                  { class: styles.features },
+                  html.button({ class: styles.button.active }, 'Basic usage'),
+                  html.button(
+                    { class: styles.button.inactive },
+                    'Handle throws'
+                  ),
+                  html.button(
+                    { class: styles.button.inactive },
+                    'Async operations'
+                  )
+                ),
                 ui.codeblock({
                   code: [
                     {

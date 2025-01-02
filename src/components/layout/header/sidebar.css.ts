@@ -31,7 +31,7 @@ const sidebar = styleVariants({
   open: [
     sidebarBase,
     {
-      transition: `transform 1s ${animation.easing.wave}`,
+      transition: `transform 0.7s ${animation.easing.wave}`,
       visibility: 'visible',
       transform: 'translateY(0)',
 
@@ -45,7 +45,7 @@ const sidebar = styleVariants({
   closed: [
     sidebarBase,
     {
-      transition: `visibility 0s 0.6s, transform 1s ${animation.easing.wave}`,
+      transition: `visibility 0s 0.6s, transform 0.7s ${animation.easing.wave}`,
       visibility: 'hidden',
       transform: 'translateY(-100%)',
     },

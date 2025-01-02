@@ -4,12 +4,12 @@ import { layout } from './components/layout';
 import { theme } from './kernel/styles';
 import { aboutRoute } from './screens/about';
 import { dontAvoidErrorsRoute } from './screens/dont-avoid-errors';
-import { homeRoute } from './screens/home';
 import { pickleRoute } from './screens/pickle';
+import { postsRoute } from './screens/posts';
 import { wildcardRoute } from './screens/wildcard';
 
 export const routes = [
-  homeRoute,
+  postsRoute,
   aboutRoute,
   pickleRoute,
   dontAvoidErrorsRoute,
