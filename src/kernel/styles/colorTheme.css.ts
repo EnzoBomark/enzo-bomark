@@ -190,6 +190,9 @@ export const colorClass = createTheme(color, {
       default: {
         color: color.semantic.neutral[200],
       },
+      strong: {
+        color: color.semantic.neutral[0],
+      },
       muted: {
         color: color.semantic.neutral[400],
       },

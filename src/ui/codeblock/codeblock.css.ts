@@ -51,7 +51,7 @@ const details = style({
   display: 'flex',
   gap: '0.5rem',
   padding: '0.5rem',
-  opacity: 0,
+  opacity: 0.5,
   transition: 'opacity 0.1s',
 
   selectors: {

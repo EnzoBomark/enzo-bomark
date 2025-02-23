@@ -34,7 +34,7 @@ export const aboutRoute = createRoute('/about')({
             direction: 'static',
             children: ui.text({
               type: 'subheadline',
-              children: html.div(
+              children: html.span(
                 `I started developing video games using C# in 2015. Since 2020, my focus has shifted primarily to creating business software and mobile applications mostly using TypeScript but not limited to it. I’m currently working as a software engineer at `,
                 ui.anchor({ href: 'https://qte.se', children: 'qte' }),
                 ` in Stockholm, Sweden.`

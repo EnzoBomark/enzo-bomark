@@ -188,6 +188,9 @@ export const color = createThemeContract({
       default: {
         color: null,
       },
+      strong: {
+        color: null,
+      },
       muted: {
         color: null,
       },

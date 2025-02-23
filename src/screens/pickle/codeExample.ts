@@ -51,7 +51,6 @@ const result = divide(10, 2)
   .effectErr(() => console.error('divide encountered an error'));
 
 const value = result.okOr(0); // 25
-
 `,
             },
           ],
@@ -90,7 +89,6 @@ function divide(x: number, by: number): number {
   .effectErr(() => console.error('divide encountered an error'));
 
 const value = result.okOr(0); // 25
-
 `,
             },
           ],
