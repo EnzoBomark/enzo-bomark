@@ -7,6 +7,7 @@ type AnchorProps = {
   href?: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
   rel?: 'noopener' | 'noreferrer' | 'noopener noreferrer';
+  decoration?: keyof typeof styles.decoration;
 };
 
 export function anchor({
@@ -14,10 +15,11 @@ export function anchor({
   href,
   target = '_blank',
   rel = 'noopener noreferrer',
+  decoration = 'default',
 }: AnchorProps) {
   return html.a(
     {
-      class: classes(styles.container),
+      class: classes(styles.container, styles.decoration[decoration]),
       href,
       target,
       rel,

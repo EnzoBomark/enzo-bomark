@@ -9,20 +9,24 @@ export function footer() {
       { class: styles.inner },
       html.div(
         { class: styles.social },
-        ui.text({
-          type: 'tag',
-          variant: 'muted',
-          children: `GitHub`,
+        ui.anchor({
+          href: 'https://github.com/EnzoBomark',
+          decoration: 'none',
+          children: ui.text({
+            type: 'tag',
+            variant: 'muted',
+            children: `GitHub`,
+          }),
         }),
-        // ui.text({
-        //   type: 'tag',
-        //   variant: 'muted',
-        //   children: `X.com`,
-        // }),
-        ui.text({
-          type: 'tag',
-          variant: 'muted',
-          children: `LinkedIn`,
+
+        ui.anchor({
+          href: 'https://www.linkedin.com/in/enzo-bomark/',
+          decoration: 'none',
+          children: ui.text({
+            type: 'tag',
+            variant: 'muted',
+            children: `LinkedIn`,
+          }),
         })
       )
     )
