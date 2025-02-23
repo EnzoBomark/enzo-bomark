@@ -27,6 +27,7 @@ export function codeExample() {
     switch (activeExample.value) {
       case 'basic':
         return ui.codeblock({
+          lang: 'typescript',
           code: [
             {
               data: `import { Result } from '@bmrk/pickle';
@@ -57,6 +58,7 @@ const value = result.okOr(0); // 25
         });
       case 'throws':
         return ui.codeblock({
+          lang: 'typescript',
           code: [
             {
               data: `import { Result } from '@bmrk/pickle';
@@ -95,6 +97,7 @@ const value = result.okOr(0); // 25
         });
       case 'async':
         return ui.codeblock({
+          lang: 'typescript',
           code: [
             {
               data: `import { Result } from '@bmrk/pickle';

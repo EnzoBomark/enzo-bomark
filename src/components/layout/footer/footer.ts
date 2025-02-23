@@ -14,11 +14,11 @@ export function footer() {
           variant: 'muted',
           children: `GitHub`,
         }),
-        ui.text({
-          type: 'tag',
-          variant: 'muted',
-          children: `X.com`,
-        }),
+        // ui.text({
+        //   type: 'tag',
+        //   variant: 'muted',
+        //   children: `X.com`,
+        // }),
         ui.text({
           type: 'tag',
           variant: 'muted',

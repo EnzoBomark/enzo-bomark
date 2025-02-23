@@ -29,8 +29,6 @@ function fire(event: MouseEvent) {
   const x = event.x / window.innerWidth;
   const y = event.y / window.innerHeight;
 
-  console.log(x, y);
-
   const fire = create(canvas);
 
   fire({
@@ -46,7 +44,7 @@ function fire(event: MouseEvent) {
   }, 6000);
 }
 
-export function createConfettiCannon() {
+export function useConfettiCannon() {
   return {
     fire,
     parentId: ID_KEY,

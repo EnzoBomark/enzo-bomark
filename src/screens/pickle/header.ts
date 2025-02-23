@@ -24,7 +24,7 @@ export function header() {
           type: 'subheadline',
           shadow: 'small',
           variant: 'muted',
-          children: `Write better predictable code with Pickle`,
+          children: `Write better, predictable code with Pickle`,
         })
       ),
     })

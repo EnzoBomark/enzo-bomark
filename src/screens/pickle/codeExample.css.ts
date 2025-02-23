@@ -4,6 +4,7 @@ import { color, variables } from '~/kernel/styles';
 const container = style({
   display: 'flex',
   justifyContent: 'center',
+  marginBottom: variables.spacing[128],
 });
 
 const features = style({

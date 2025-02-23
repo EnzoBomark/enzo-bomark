@@ -21,7 +21,6 @@ export const aboutRoute = createRoute('/about')({
           }),
           ui.fadeInOnScroll({
             direction: 'down',
-            delay: 'short',
             children: ui.text({
               type: 'subheadline',
               variant: 'muted',
@@ -35,8 +34,11 @@ export const aboutRoute = createRoute('/about')({
             direction: 'static',
             children: ui.text({
               type: 'subheadline',
-              children: `I started developing video games using C# in 2015. Since 2020, my focus has shifted primarily to creating business software and mobile applications mostly using TypeScript but not limited to it.
-            `,
+              children: html.div(
+                `I started developing video games using C# in 2015. Since 2020, my focus has shifted primarily to creating business software and mobile applications mostly using TypeScript but not limited to it. I’m currently working as a software engineer at `,
+                ui.anchor({ href: 'https://qte.se', children: 'qte' }),
+                ` in Stockholm, Sweden.`
+              ),
             }),
           })
         ),
@@ -46,7 +48,7 @@ export const aboutRoute = createRoute('/about')({
             direction: 'static',
             children: ui.text({
               type: 'subheadline',
-              children: `This is my personal notebook, where I’ll somewhat seriously attempt to jot down the lessons I’ve learned.
+              children: `This is my personal notebook, where I’ll somewhat seriously attempt to jot down some lessons I’ve learned.
             `,
             }),
           })
