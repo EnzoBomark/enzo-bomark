@@ -10,6 +10,7 @@ export const aboutRoute = createRoute('/about')({
       variant: 'sm',
       children: html.div(
         { class: styles.container },
+
         html.div(
           { class: styles.header },
           ui.fadeInOnScroll({
@@ -19,12 +20,38 @@ export const aboutRoute = createRoute('/about')({
               children: `Enzo Bomark.`,
             }),
           }),
+          html.div(
+            { class: styles.picture },
+            ui.fadeInOnScroll({
+              direction: 'static',
+              children: html.div(
+                { class: styles.image },
+                html.img({
+                  class: styles.img,
+                  src: '/images/me.jpg',
+                  alt: 'Enzo Bomark',
+                })
+              ),
+            })
+          ),
           ui.fadeInOnScroll({
             direction: 'down',
             children: ui.text({
               type: 'subheadline',
               variant: 'muted',
               children: `Software Engineer.`,
+            }),
+          })
+        ),
+
+        html.div(
+          { class: styles.content },
+          ui.fadeInOnScroll({
+            direction: 'static',
+            children: ui.text({
+              type: 'subheadline',
+              children: `This is my personal notebook, where I’ll somewhat seriously attempt to jot down some lessons I’ve learned.
+            `,
             }),
           })
         ),
@@ -39,42 +66,6 @@ export const aboutRoute = createRoute('/about')({
                 ui.anchor({ href: 'https://qte.se', children: 'qte' }),
                 ` in Stockholm, Sweden.`
               ),
-            }),
-          })
-        ),
-        html.div(
-          { class: styles.content },
-          ui.fadeInOnScroll({
-            direction: 'static',
-            children: ui.text({
-              type: 'subheadline',
-              children: `This is my personal notebook, where I’ll somewhat seriously attempt to jot down some lessons I’ve learned.
-            `,
-            }),
-          })
-        ),
-        html.div(
-          { class: styles.picture },
-          ui.fadeInOnScroll({
-            direction: 'static',
-            children: html.div(
-              { class: styles.image },
-              html.img({
-                class: styles.img,
-                src: '/images/me.png',
-                alt: 'Enzo Bomark',
-              })
-            ),
-          })
-        ),
-        html.div(
-          { class: styles.content },
-          ui.fadeInOnScroll({
-            direction: 'static',
-            children: ui.text({
-              type: 'subheadline',
-              children: `The person you see above is me on a hike — probably my favorite activity alongside programming.
-            `,
             }),
           })
         )

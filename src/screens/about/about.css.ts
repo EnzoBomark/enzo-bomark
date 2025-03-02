@@ -17,13 +17,12 @@ const picture = style({
 
 const image = style({
   position: 'relative',
-  height: '300px',
+  height: '200px',
 });
 
 const img = style({
   borderRadius: '0.125rem',
   objectFit: 'cover',
-  width: '100%',
   height: '100%',
 });
 

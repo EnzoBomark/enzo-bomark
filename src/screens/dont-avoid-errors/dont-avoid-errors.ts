@@ -234,12 +234,14 @@ let file = match file_result {
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
+              variant: 'muted',
               children: html.span(
                 `We will asume that the parsed JSON is of type `,
                 ui.text({
                   span: true,
                   highlight: 'neutral',
                   children: `{ host: string; port: number }`,
+                  variant: 'muted',
                 }),
                 `, in a real-world scenario, you would also need to validate the parsed JSON to ensure it matches the expected schema.`
               ),
@@ -258,7 +260,7 @@ let file = match file_result {
     const config = JSON.parse(fileContent);
     return { host: config.host, port: config.port };
   } catch (error) {
-    return error;
+    return new Error('Failed to load configuration');
   }
 }
 
