@@ -1,5 +1,5 @@
 import { style, styleVariants } from '@vanilla-extract/css';
-import { color } from '~/kernel/styles';
+import { breakpointMediaQuery, color } from '~/kernel/styles';
 
 const container = style({
   position: 'relative',
@@ -45,18 +45,25 @@ const display = styleVariants({
 });
 
 const details = style({
-  position: 'absolute',
-  bottom: 0,
-  right: 0,
   display: 'flex',
   gap: '0.5rem',
   padding: '0.5rem',
   opacity: 0.5,
   transition: 'opacity 0.1s',
 
+  justifyContent: 'flex-end',
+
   selectors: {
     [`${container}:hover &`]: {
       opacity: 1,
+    },
+  },
+
+  '@media': {
+    [breakpointMediaQuery.sm]: {
+      position: 'absolute',
+      bottom: '0',
+      right: '0',
     },
   },
 });
