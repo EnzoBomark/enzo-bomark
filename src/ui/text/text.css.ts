@@ -41,7 +41,7 @@ const legibility = styleVariants({
 const types = styleVariants({
   hero: {
     fontSize: '3rem',
-    lineHeight: '3.75rem',
+    lineHeight: '3.125rem',
     fontWeight: '700',
   },
   heading: {

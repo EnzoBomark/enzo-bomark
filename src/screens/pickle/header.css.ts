@@ -8,6 +8,7 @@ const header = style({
 
 const title = style({
   textAlign: 'center',
+  marginBottom: '0.75rem',
 });
 
 const subtitle = style({
