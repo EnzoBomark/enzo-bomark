@@ -196,6 +196,9 @@ export const colorClass = createTheme(color, {
       muted: {
         color: color.semantic.neutral[400],
       },
+      subdued: {
+        color: color.semantic.neutral[300],
+      },
     },
   },
 });

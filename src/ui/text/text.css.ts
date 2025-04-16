@@ -13,6 +13,9 @@ const variants = styleVariants({
   muted: {
     color: color.component.text.muted.color,
   },
+  subdued: {
+    color: color.component.text.subdued.color,
+  },
 });
 
 const shadow = styleVariants({

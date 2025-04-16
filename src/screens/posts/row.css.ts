@@ -1,6 +1,11 @@
 import { style } from '@vanilla-extract/css';
 import { animation, color } from '~/kernel/styles';
 
+const row = style({
+  listStyle: 'none',
+  position: 'relative',
+});
+
 const container = style({
   padding: '0.75rem',
   transition: 'background-color 0.2s',
@@ -61,6 +66,7 @@ const icon = style({
 });
 
 export const styles = {
+  row,
   container,
   devider,
   wrapper,

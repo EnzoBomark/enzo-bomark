@@ -7,7 +7,7 @@ import { text } from '../text';
 import { styles } from './codeblock.css';
 
 type CodeblockProps = {
-  lang: 'go' | 'rust' | 'typescript';
+  lang: 'go' | 'rust' | 'typescript' | 'none';
   code: Array<{
     data: string;
     type?: 'block' | 'inline';
@@ -49,10 +49,12 @@ export function codeblock({ lang, code }: CodeblockProps) {
         { class: styles.copy, onclick: copyToCodeClipboard },
         icon.copy({ size: 16 })
       ),
-      html.button(
-        { class: styles.language, onclick: copyLangToClipboard },
-        text({ children: lang })
-      )
+      lang !== 'none'
+        ? html.button(
+            { class: styles.language, onclick: copyLangToClipboard },
+            text({ children: lang })
+          )
+        : undefined
     )
   );
 }

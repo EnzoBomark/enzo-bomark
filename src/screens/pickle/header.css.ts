@@ -15,8 +15,16 @@ const subtitle = style({
   textAlign: 'center',
 });
 
+const beta = style({
+  textAlign: 'center',
+  width: 'fit-content',
+  margin: '0 auto',
+  marginTop: '0.75rem',
+});
+
 export const styles = {
   header,
   title,
   subtitle,
+  beta,
 };

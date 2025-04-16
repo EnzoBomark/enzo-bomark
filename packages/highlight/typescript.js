@@ -860,6 +860,21 @@ var hljsGrammar = (function () {
       aliases: ['ts', 'tsx', 'mts', 'cts'],
     });
 
+    tsLanguage.contains.push({
+      // TSX/JSX support
+      variants: [
+        { begin: /<>\s*/, end: /\s*<\/>/ }, // Fragment
+        { match: /<[\w.:]+[^>]*?\/>/ }, // Self-closing tag
+        {
+          begin: /<[\w.:]+/, // Opening tag
+          end: />/,
+          subLanguage: 'xml',
+          contains: [],
+        },
+      ],
+      subLanguage: 'xml',
+    });
+
     return tsLanguage;
   }
 

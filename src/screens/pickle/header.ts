@@ -25,7 +25,17 @@ export function header() {
           shadow: 'small',
           variant: 'muted',
           children: `Write better, predictable code with Pickle`,
-        })
+        }),
+        html.div(
+          { class: styles.beta },
+          ui.text({
+            type: 'caption',
+            shadow: 'small',
+            variant: 'muted',
+            highlight: 'warning',
+            children: `Not yet ready for production`,
+          })
+        )
       ),
     })
   );

@@ -6,6 +6,7 @@ import { aboutRoute } from './screens/about';
 import { dontAvoidErrorsRoute } from './screens/dont-avoid-errors';
 import { pickleRoute } from './screens/pickle';
 import { postsRoute } from './screens/posts';
+import { stacksOnStacksRoute } from './screens/stacks-on-stacks';
 import { wildcardRoute } from './screens/wildcard';
 
 export const routes = [
@@ -13,6 +14,7 @@ export const routes = [
   aboutRoute,
   pickleRoute,
   dontAvoidErrorsRoute,
+  stacksOnStacksRoute,
   wildcardRoute,
 ];
 

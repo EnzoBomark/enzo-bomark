@@ -4,6 +4,7 @@ import { card } from './card';
 import { codeblock } from './codeblock';
 import { fadeInOnScroll } from './fadeInOnScroll';
 import { link } from './link';
+import { list } from './list';
 import { text } from './text';
 
 export const ui = {
@@ -14,4 +15,5 @@ export const ui = {
   fadeInOnScroll,
   link,
   text,
+  list,
 };

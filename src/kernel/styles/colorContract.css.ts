@@ -194,6 +194,9 @@ export const color = createThemeContract({
       muted: {
         color: null,
       },
+      subdued: {
+        color: null,
+      },
     },
   },
 });

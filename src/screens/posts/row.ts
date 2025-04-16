@@ -14,7 +14,8 @@ type RowProps = {
 export function row<To extends (typeof paths)[number]>(
   props: RowProps & LinkParams<(typeof paths)[number], To>
 ) {
-  return [
+  return html.li(
+    { class: styles.row },
     ui.link({
       ...props,
       children: html.div(
@@ -46,6 +47,6 @@ export function row<To extends (typeof paths)[number]>(
     html.div({
       style: inline({ animationDelay: `${props.index * 0.1}s` }),
       class: styles.devider,
-    }),
-  ];
+    })
+  );
 }

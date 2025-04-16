@@ -9,6 +9,10 @@ const container = style({
   backgroundColor: color.semantic.neutral[925],
   borderRadius: '0.125rem',
   zIndex: 0,
+  minHeight: '3.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
 });
 
 const highlight = style({

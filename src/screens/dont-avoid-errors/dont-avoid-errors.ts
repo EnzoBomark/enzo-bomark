@@ -70,8 +70,7 @@ export const dontAvoidErrorsRoute = createRoute('/dont-avoid-errors')({
     return { host: config.host, port: config.port };
   }
   
-  // proceed with the config
-  `,
+  // proceed with the config`,
                   },
                 ],
               })
