@@ -445,7 +445,7 @@ function loadConfig(
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `Effective error handling is a cornerstone of robust software. While exceptions remain the standard error-handling pattern in TypeScript and should be used to catch unexpected or unrecoverable errors, adopting the "Error as Value" pattern provides a compelling alternative when dealing with expected errors.`,
+              children: `Effective error handling is a fundamental part of good software. While exceptions remain the standard error-handling pattern in TypeScript and should be used to catch unexpected or unrecoverable errors, using the 'Error as Value' pattern offers a clean and effective way to handle expected errors.`,
             })
           ),
         })
