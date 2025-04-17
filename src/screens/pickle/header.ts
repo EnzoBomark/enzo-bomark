@@ -11,7 +11,7 @@ export function header() {
         ui.text({
           shadow: 'small',
           type: 'hero',
-          children: `Gone are the unexpected errors`,
+          children: `Gone are the unexpected exceptions`,
         })
       ),
     }),
