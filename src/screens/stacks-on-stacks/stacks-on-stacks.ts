@@ -46,7 +46,7 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `Navigation in mobile apps tends to be more complex and stateful than on the web. There are also some expectations on app naviations: each tab should preserve its own navigation state. For example:`,
+              children: `Navigation in mobile apps tends to be more complex and stateful than on the web. There are also expectations on app navigation: each tab should preserve its own navigation state. For example:`,
             }),
             ui.list({
               items: [
@@ -100,12 +100,12 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `Additionally, if a user opens a profile from the Explore tab, it should open within the Explore tab’s context, not redirect to the Profile tab. This highlights how app navigation often extends beyond the simpler patterns found on the web.`,
+              children: `Additionally, if a user opens a profile from the Explore tab, it should open within the Explore tab’s context, not redirect to the Profile tab.`,
             }),
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `To support this behavior, Expo Router allows you to define separate user profile routes within each tab, one for Home, one for Explore, and one for Profile. This ensures consistent, tab-scoped navigation. However, to avoid duplicating code, a good approach is to create small wrapper files for each tab's profile route. These wrappers import and render a shared profile component.`,
+              children: `This behavior is achievable in Expo Router by defining a separate user profile route within each tab, one for Home, one for Explore, and one for Profile. This ensures consistent, tab-scoped navigation. However, to avoid duplicating code, a good approach is to move the screens out of the app router and instead import them from a shared location. This way, you can have a single implementation of the user profile screen that is used in all three tabs.`,
             })
           ),
         }),
@@ -122,7 +122,7 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `Expo Router also supports a segmentation feature that allows you to group routes together. This is particularly useful for creating a unified stack for all three tabs.`,
+              children: `Expo Router also supports route grouping. This is particularly useful for creating a unified stack for all three tabs.`,
             }),
             html.div(
               { class: styles.block },
@@ -135,11 +135,6 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
                 ],
               })
             ),
-            ui.text({
-              type: 'subheadline',
-              legibility: 'legible',
-              children: `This single route definition works seamlessly across all three tabs.`,
-            }),
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
@@ -160,7 +155,7 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
             ui.text({
               type: 'subheadline',
               legibility: 'legible',
-              children: `Let’s take a look at how to implement this in practice. We’ll create a simple app with three tabs: Home, Explore, and Profile. Each tab will have its own stack navigator state.`,
+              children: `Let’s take a look at how to implement this in practice. We’ll start with the following route structure:`,
             }),
             html.div(
               { class: styles.block },
@@ -199,6 +194,11 @@ export const stacksOnStacksRoute = createRoute('/stacks-on-stacks')({
                 })
               ),
             }),
+            ui.text({
+              type: 'subheadline',
+              legibility: 'legible',
+              children: `This is the root layout for your app. It’s a stack that contains the tabs layout and a not-found route. The not-found route is used to handle any routes that don’t match the defined routes in the app.`,
+            }),
             html.div(
               { class: styles.block },
               ui.codeblock({
@@ -233,6 +233,11 @@ export default RootLayout;`,
                   children: `app/(tabs)/_layout.tsx`,
                 })
               ),
+            }),
+            ui.text({
+              type: 'subheadline',
+              legibility: 'legible',
+              children: `This tabs layout defines the three tabs: Home, Explore, and Profile. Each tab has its own stack state, but they all share the same stack layout. This is achieved by using the segment name in the stack layout.`,
             }),
             html.div(
               { class: styles.block },
@@ -308,6 +313,11 @@ export default TabLayout;`,
                 })
               ),
             }),
+            ui.text({
+              type: 'subheadline',
+              legibility: 'legible',
+              children: `This is the shared stack layout for all three tabs. It only defines one of the tab specific screens plus the screens that are common across all tabs, such as the user profile screen and any other screens that are shared between the tabs.`,
+            }),
             html.div(
               { class: styles.block },
               ui.codeblock({
@@ -315,10 +325,13 @@ export default TabLayout;`,
                 code: [
                   {
                     data: `import { Stack } from 'expo-router';
-import { useMemo } from 'react';
 
-const StackLayout = ({ segment }: { segment: string }) => {
-  const tabs = useMemo(() => {
+type StackLayoutProps = {
+  segment: string;
+};
+
+function StackLayout({ segment }: StackLayoutProps) {
+  function tabs() {
     switch (segment) {
       case '(home)':
         return <Stack.Screen name="index" options={{ title: 'Home' }} />;
@@ -327,15 +340,13 @@ const StackLayout = ({ segment }: { segment: string }) => {
       case '(profile)':
         return <Stack.Screen name="profile" options={{ title: 'Profile' }} />;
       default:
-        throw new Error(
-          \`Unknown segment: $\{segment}. Expected '(home)', '(explore)', or '(profile)'.\`
-        );
+        throw new Error(\`Unknown segment: $\{segment}\`);
     }
-  }, [segment]);
+  }
 
   return (
     <Stack>
-      {tabs}
+      {tabs()}
     
       <Stack.Screen name="users/[username]" />
     
